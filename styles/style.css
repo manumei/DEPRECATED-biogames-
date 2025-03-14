@@ -1,14 +1,14 @@
 body {
-    background-color: rgb(9, 87, 15)
+    color: whitesmoke;
+    background-color: rgb(6, 23, 48);
 }
-
 
 header {
     display: flex;
     padding: 0.4rem;
     justify-content: center; /* Center horizontally */
     align-items: center;
-    background-color: rgba(12, 102, 20, 0.87);
+    background-color: rgb(8, 28, 58);
     border-bottom: 0.4px solid rgb(247, 207, 79); /* Purple horizontal line */
 }
 

@@ -1,0 +1,29 @@
+/* Center panels in main content */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center panels horizontally */
+    margin-top: 0.4rem; /* Space below header */
+}
+
+/* Panel button styles */
+.panel {
+    width: 10rem;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: center;
+    background-color: rgb(107, 177, 60);
+    border-radius: 10px;
+    font-size: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+/* Hover effect */
+.panel:hover {
+    background-color: rgb(80, 148, 35);
+    transform: scale(1.05);
+}
