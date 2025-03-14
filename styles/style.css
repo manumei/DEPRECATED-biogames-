@@ -1,0 +1,39 @@
+body {
+    background-color: rgb(9, 87, 15)
+}
+
+
+header {
+    display: flex;
+    padding: 0.4rem;
+    justify-content: center; /* Center horizontally */
+    align-items: center;
+    background-color: rgba(12, 102, 20, 0.87);
+    border-bottom: 0.4px solid rgb(247, 207, 79); /* Purple horizontal line */
+}
+
+.logo {
+    display: flex;
+    align-items: center; /* Aligns text and image on the same line */
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+.logo img {
+    width: 11.5px; /* Adjust size as needed */
+    height: auto;
+    margin-left: 2.4px;
+}
+
+.logo:hover {
+    opacity: 0.8;
+}
+
+
+.green {
+    background: linear-gradient(to bottom, rgb(177, 255, 6), rgb(34, 129, 1)); /* Light green to dark green */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
