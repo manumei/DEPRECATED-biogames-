@@ -3,18 +3,18 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center; /* Center panels horizontally */
-    margin-top: 0.4rem; /* Space below header */
+    margin-top: 1.5rem; /* Space below header */
 }
 
 /* Panel button styles */
 .panel {
-    width: 10rem;
-    padding: 10px;
-    margin: 10px 0;
+    width: 35rem;
+    padding: 4rem;
+    margin: 1.5rem 0;
     text-align: center;
     background-color: rgb(107, 177, 60);
-    border-radius: 10px;
-    font-size: 10px;
+    border-radius: 3rem;
+    font-size: 2.4rem;
     font-weight: bold;
     text-decoration: none;
     color: rgb(0, 0, 0);
@@ -24,6 +24,6 @@ main {
 
 /* Hover effect */
 .panel:hover {
-    background-color: rgb(80, 148, 35);
+    background-color: rgb(72, 138, 28);
     transform: scale(1.05);
 }
