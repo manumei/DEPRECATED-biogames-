@@ -2,9 +2,9 @@
 
 ## Play Biology Minigames
 
-### Taxo-Match
+### Taxo-Bingo
 
-Given 4 organisms of a same Kingdom, match them with their corresponding Phylum
+Given a Bingo-like grid of taxonomic classifications, match the organisms that appear on the screen with one that suits them
 
 ### Disease-TicTacToe
 

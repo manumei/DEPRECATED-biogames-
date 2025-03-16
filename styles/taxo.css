@@ -4,54 +4,72 @@ main {
     align-items: center;
     height: 100vh;
     margin: 0;
+    color: whitesmoke;
 }
 
 .menu-container {
+    margin-top: -26rem;
+    display: flex;
     background: rgb(10, 33, 68);
     padding: 20px;
     border-radius: 10px;
+    border: 0.5px solid rgb(94, 255, 0);
     text-align: center;
-    width: 400px;
+    width: 45rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    gap: 20px; /* Adds space between image and text/buttons */
 }
 
 .menu-image {
-    width: 100%;
+    width: 25rem; /* Adjust size */
+    height: auto;
     border-radius: 10px;
 }
 
+.menu-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns text & buttons to the left */
+    flex: 1; /* Takes up remaining space */
+}
+
 .menu-text {
-    margin: 15px 0;
+    margin: 10px 0 0 1.5rem;
     font-size: 16px;
+    text-align: left;
 }
 
 .difficulty-buttons {
+    color: whitesmoke;
     display: flex;
-    justify-content: space-around;
-    margin: 15px 0;
+    justify-content: center; /* Centers buttons horizontally */
+    margin: 0.25rem 0 0.5rem 1.5rem;
+    gap: 1rem; /* Adds horizontal space between buttons */
 }
 
 .difficulty-btn {
-    padding: 10px 15px;
+    color: whitesmoke;
+    padding: 9px 13.5px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #ddd;
+    background-color: rgba(124, 208, 215, 0.1);
 }
 
 .difficulty-btn:hover {
-    background-color: #bbb;
+    background-color: rgba(110, 199, 207, 0.295);
 }
 
 #start-game-btn {
     padding: 10px 20px;
+    margin: 1rem 0 0.5rem 1.5rem;
     border: none;
-    background-color: #4CAF50;
+    background-color: #23a328;
     color: white;
     cursor: pointer;
     border-radius: 5px;
 }
 
 #start-game-btn:hover {
-    background-color: #45a049;
+    background-color: #23a327b7;
 }

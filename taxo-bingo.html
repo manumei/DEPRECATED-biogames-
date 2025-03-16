@@ -10,8 +10,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Tilt+Neon&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link rel="preload" href="styles/normalize.css" as="style">
@@ -35,18 +34,21 @@
 
     <main>
         <div id="menu" class="menu-container">
-            <img src="assets/img/taxo-cover.png" alt="Taxo-Match Cover" class="menu-image">
-            <p class="menu-text">Match the given organisms with their according taxonomic classification. Select a difficulty and start playing.</p>
-            <div class="difficulty-buttons">
-                <button class="difficulty-btn" data-difficulty="easy">Easy</button>
-                <button class="difficulty-btn" data-difficulty="medium">Medium</button>
-                <button class="difficulty-btn" data-difficulty="hard">Hard</button>
+            <img src="assets/img/taxo-cover.png" alt="Taxo-Bingo Cover" class="menu-image">
+            
+            <div class="menu-content">
+                <p class="menu-text">Match the given organisms with their according taxonomic classification.
+                    <br><br> You will be shown 6 images of living organisms that share a common classification level, and classification categories 
+                    <br><br>Select a difficulty and start playing:</p>
+                <div class="difficulty-buttons">
+                    <button class="difficulty-btn" data-difficulty="easy">Easy</button>
+                    <button class="difficulty-btn" data-difficulty="medium">Medium</button>
+                    <button class="difficulty-btn" data-difficulty="hard">Hard</button>
+                </div>
+                <button id="start-game-btn">Start Game</button>
             </div>
-            <button id="start-game-btn">Start Game</button>
         </div>
     </main>
-
-
 
 
 </body>
