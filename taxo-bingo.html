@@ -34,22 +34,26 @@
 
     <main>
         <div id="menu" class="menu-container">
-            <img src="assets/img/taxo-cover.png" alt="Taxo-Bingo Cover" class="menu-image">
+            <h2 class="menu-title"><span class="green">TAXO</span> BINGO</h2>
             
-            <div class="menu-content">
-                <p class="menu-text">Match the given organisms with their according taxonomic classification.
-                    <br><br> You will be shown 6 images of living organisms that share a common classification level, and classification categories 
-                    <br><br>Select a difficulty and start playing:</p>
-                <div class="difficulty-buttons">
-                    <button class="difficulty-btn" data-difficulty="easy">Easy</button>
-                    <button class="difficulty-btn" data-difficulty="medium">Medium</button>
-                    <button class="difficulty-btn" data-difficulty="hard">Hard</button>
+            <div class="menu-content-container"> <!-- Image & text side by side -->
+                <img src="assets/img/taxo-cover.png" alt="Taxo-Bingo Cover" class="menu-image">
+                
+                <div class="menu-content">
+                    <p class="menu-text">Match the given organisms with their according taxonomic classification.
+                        <br><br> You will have to fill a grid of 12 taxonomic categories with the organisms provided.
+                        <br><br> When an organism appears, click a category where it fits, or skip to the next. Fill the whole grid to win!
+                        <br><br>Select your timer below:</p>
+                    <div class="difficulty-buttons">
+                        <button class="difficulty-btn" data-difficulty="easy">Easy</button>
+                        <button class="difficulty-btn" data-difficulty="medium">Medium</button>
+                        <button class="difficulty-btn" data-difficulty="hard">Hard</button>
+                    </div>
+                    <button id="start-game-btn">Start Game</button>
                 </div>
-                <button id="start-game-btn">Start Game</button>
             </div>
         </div>
     </main>
-
 
 </body>
 
