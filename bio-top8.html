@@ -17,13 +17,13 @@
     <link rel="stylesheet" type="text/css" href="styles/normalize.css">
     <link rel="preload" href="styles/style.css" as="style">
     <link rel="stylesheet" type="text/css" href="styles/style.css">
-    <link rel="preload" href="styles/top6.css" as="style">
-    <link rel="stylesheet" type="text/css" href="styles/top6.css">
+    <link rel="preload" href="styles/top8.css" as="style">
+    <link rel="stylesheet" type="text/css" href="styles/top8.css">
     <link rel="preload" href="styles/menu.css" as="style">
     <link rel="stylesheet" type="text/css" href="styles/menu.css">
 
     <!-- Scripts -->
-    <script src="javascript/top6.js" defer></script>
+    <script src="javascript/top8.js" defer></script>
 </head>
 
 <body>
@@ -36,15 +36,15 @@
 
     <main>
         <div id="menu" class="menu-container">
-            <h2 class="menu-title"><span class="green">TAXO</span> BINGO</h2>
+            <h2 class="menu-title"><span class="green"></span> BINGO</h2>
             
             <div class="menu-content-container"> <!-- Image & text side by side -->
                 <img src="assets/img/taxo-cover.png" alt="Taxo-Bingo Cover" class="menu-image">
                 
                 <div class="menu-content">
-                    <p class="menu-text">Match the given organisms with their according taxonomic classification.
-                        <br><br> You will have to fill a grid of 12 taxonomic categories with the organisms provided.
-                        <br><br> When an organism appears, click a category where it fits, or skip to the next. Fill the whole grid to win!
+                    <p class="menu-text">Complete the Top8 list if the category suggested by the title.
+                        <br><br> Type the names and enter, if in the list, they will be automatically ordered
+                            <br><br> The "With Hints" option will display the amount of letters in the word (not counting spaces!)
                         <br><br>Select your timer below:</p>
                     <div class="difficulty-buttons">
                         <button class="difficulty-btn" data-difficulty="60s">60s</button>
@@ -52,6 +52,7 @@
                         <button class="difficulty-btn" data-difficulty="120s">120s</button>
                     </div>
                     <button id="start-game-btn">Start Game</button>
+                    <button id="hints-btn">With Hints</button>
                 </div>
             </div>
         </div>
