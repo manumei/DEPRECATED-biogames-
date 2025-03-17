@@ -19,6 +19,8 @@
     <link rel="stylesheet" type="text/css" href="styles/style.css">
     <link rel="preload" href="styles/tictac.css" as="style">
     <link rel="stylesheet" type="text/css" href="styles/tictac.css">
+    <link rel="preload" href="styles/menu.css" as="style">
+    <link rel="stylesheet" type="text/css" href="styles/menu.css">
 
     <!-- Scripts -->
     <script src="javascript/tictac.js" defer></script>
@@ -33,8 +35,28 @@
     </header>
 
     <main>
-
+        <div id="menu" class="menu-container">
+            <h2 class="menu-title"><span class="green">DISEASE</span> TICTACTOE</h2>
+            
+            <div class="menu-content-container"> <!-- Image & text side by side -->
+                <img src="assets/img/taxo-cover.png" alt="Taxo-Bingo Cover" class="menu-image">
+                
+                <div class="menu-content">
+                    <p class="menu-text">List Diseases that match both the row and column symptom combinations.
+                        <br><br>Fill the 3x3 Grid with the appropriate disease names, Write the disease name and press Enter to input it as an answer.
+                        <br><br>If one fits multiple cells, choose cell by clicking on it. Fill the whole grid to win!
+                        <br><br>Select your difficulty below:</p>
+                    <div class="difficulty-buttons">
+                        <button class="difficulty-btn" data-difficulty="Easy">Easy</button>
+                        <button class="difficulty-btn" data-difficulty="Medium">Medium</button>
+                        <button class="difficulty-btn" data-difficulty="Hard">Hard</button>
+                    </div>
+                    <button id="start-game-btn">Start Game</button>
+                </div>
+            </div>
+        </div>
     </main>
+
 </body>
 
 </html>

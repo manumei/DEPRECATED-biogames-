@@ -1,0 +1,97 @@
+main {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    color: whitesmoke;
+}
+
+.menu-container {
+    margin-top: 1.5rem;
+    flex-direction: column; /* Stacks title on top, image & text below */
+    align-items: center; /* Centers title */
+    display: flex;
+    background: rgb(10, 33, 68);
+    padding: 1rem;
+    border-radius: 10px;
+    border: 0.5px solid rgb(94, 255, 0);
+    /* text-align: center; */
+    width: 40rem;
+    height: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    gap: 1rem; /* Adds space between image and text/buttons */
+}
+
+.menu-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+    color: whitesmoke;
+}
+
+.menu-image {
+    width: 20rem; /* Adjust size */
+    height: auto;
+    border-radius: 10px;
+}
+
+.menu-content-container {
+    display: flex;
+    align-items: center; /* Vertically aligns image and text */
+    /* justify-content: center; */
+    gap: 0.7rem; /* Space between image and text */
+    width: 100%; /* Ensures it spans full width of the panel */
+    text-align: left;
+}
+
+.menu-text {
+    margin-left: 1rem;
+    margin-top: -1rem;
+    font-size: 16px;
+    text-align: left;
+}
+
+.difficulty-buttons {
+    color: whitesmoke;
+    display: flex;
+    margin-top: -0.65rem;
+    margin-left: 1rem;
+    gap: 1rem;
+}
+
+.difficulty-btn {
+    color: whitesmoke;
+    padding: 9px 13.5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgba(124, 208, 215, 0.1);
+}
+
+.difficulty-btn:hover {
+    background-color: rgba(110, 199, 207, 0.295);
+}
+
+.selected {
+    background-color: #007bff;
+    color: white;
+}
+
+
+.selected:hover {
+    background-color: #007bff;
+}
+
+#start-game-btn {
+    padding: 10px 20px;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    border: none;
+    background-color: #23a328;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#start-game-btn:hover {
+    background-color: #23a327b7;
+}

@@ -19,6 +19,8 @@
     <link rel="stylesheet" type="text/css" href="styles/style.css">
     <link rel="preload" href="styles/top6.css" as="style">
     <link rel="stylesheet" type="text/css" href="styles/top6.css">
+    <link rel="preload" href="styles/menu.css" as="style">
+    <link rel="stylesheet" type="text/css" href="styles/menu.css">
 
     <!-- Scripts -->
     <script src="javascript/top6.js" defer></script>
@@ -33,8 +35,28 @@
     </header>
 
     <main>
-
+        <div id="menu" class="menu-container">
+            <h2 class="menu-title"><span class="green">TAXO</span> BINGO</h2>
+            
+            <div class="menu-content-container"> <!-- Image & text side by side -->
+                <img src="assets/img/taxo-cover.png" alt="Taxo-Bingo Cover" class="menu-image">
+                
+                <div class="menu-content">
+                    <p class="menu-text">Match the given organisms with their according taxonomic classification.
+                        <br><br> You will have to fill a grid of 12 taxonomic categories with the organisms provided.
+                        <br><br> When an organism appears, click a category where it fits, or skip to the next. Fill the whole grid to win!
+                        <br><br>Select your timer below:</p>
+                    <div class="difficulty-buttons">
+                        <button class="difficulty-btn" data-difficulty="60s">60s</button>
+                        <button class="difficulty-btn" data-difficulty="90s">90s</button>
+                        <button class="difficulty-btn" data-difficulty="120s">120s</button>
+                    </div>
+                    <button id="start-game-btn">Start Game</button>
+                </div>
+            </div>
+        </div>
     </main>
+
 </body>
 
 </html>
