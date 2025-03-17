@@ -10,4 +10,6 @@ Given a Bingo-like grid of taxonomic classifications, match the organisms that a
 
 Tic-Tac-Toe-style grid of matching symptons, guess diseases that share these symptoms
 
-### Bio Top6 (coming soon!)
+### Bio top8 (coming soon!)
+
+Given a certain category, guess what the top 8 answers are for it

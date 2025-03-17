@@ -17,13 +17,13 @@
     <link rel="stylesheet" type="text/css" href="styles/normalize.css">
     <link rel="preload" href="styles/style.css" as="style">
     <link rel="stylesheet" type="text/css" href="styles/style.css">
-    <link rel="preload" href="styles/tictac.css" as="style">
-    <link rel="stylesheet" type="text/css" href="styles/tictac.css">
+    <link rel="preload" href="styles/top8.css" as="style">
+    <link rel="stylesheet" type="text/css" href="styles/top8.css">
     <link rel="preload" href="styles/menu.css" as="style">
     <link rel="stylesheet" type="text/css" href="styles/menu.css">
 
     <!-- Scripts -->
-    <script src="javascript/tictac.js" defer></script>
+    <script src="javascript/top8.js" defer></script>
 </head>
 
 <body>
@@ -36,22 +36,23 @@
 
     <main>
         <div id="menu" class="menu-container">
-            <h2 class="menu-title"><span class="green">DISEASE</span> TICTACTOE</h2>
+            <h2 class="menu-title"><span class="green"></span> BINGO</h2>
             
             <div class="menu-content-container"> <!-- Image & text side by side -->
                 <img src="assets/img/taxo-cover.png" alt="Taxo-Bingo Cover" class="menu-image">
                 
                 <div class="menu-content">
-                    <p class="menu-text">List Diseases that match both the row and column symptom combinations.
-                        <br><br>Fill the 3x3 Grid with the appropriate disease names, Write the disease name and press Enter to input it as an answer.
-                        <br><br>If one fits multiple cells, choose cell by clicking on it. Fill the whole grid to win!
-                        <br><br>Select your difficulty below:</p>
+                    <p class="menu-text">Complete the Top8 list if the category suggested by the title.
+                        <br><br> Type the names and enter, if in the list, they will be automatically ordered
+                            <br><br> The "With Hints" option will display the amount of letters in the word (not counting spaces!)
+                        <br><br>Select your timer below:</p>
                     <div class="difficulty-buttons">
-                        <button class="difficulty-btn" data-difficulty="Easy">Easy</button>
-                        <button class="difficulty-btn" data-difficulty="Medium">Medium</button>
-                        <button class="difficulty-btn" data-difficulty="Hard">Hard</button>
+                        <button class="difficulty-btn" data-difficulty="60s">60s</button>
+                        <button class="difficulty-btn" data-difficulty="90s">90s</button>
+                        <button class="difficulty-btn" data-difficulty="120s">120s</button>
                     </div>
                     <button id="start-game-btn">Start Game</button>
+                    <button id="hints-btn">With Hints</button>
                 </div>
             </div>
         </div>
