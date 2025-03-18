@@ -1,9 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-    let selectedTime = 120; // Default time in seconds
-
-    const difficultyButtons = document.querySelectorAll(".difficulty-btn");
     const startGameBtn = document.getElementById("start-game-btn");
     const menu = document.getElementById("menu");
+    const gameContainer = document.getElementById("game-container");
+    const organismText = document.getElementById("organism-text");
     const bingoGrid = document.getElementById("bingo-grid");
 
     const taxonomicCategories = [
@@ -14,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ];
 
     function generateBingoGrid() {
-        bingoGrid.innerHTML = ""; // Clear previous grid if any
+        bingoGrid.innerHTML = "";
         const shuffled = taxonomicCategories.sort(() => 0.5 - Math.random());
         const selectedCategories = shuffled.slice(0, 12);
 
@@ -27,9 +26,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     startGameBtn.addEventListener("click", () => {
-        menu.style.display = "none"; // Hide menu
-        bingoGrid.style.display = "grid"; // Show the game grid
-        generateBingoGrid(); // Populate grid with random categories
+        menu.classList.add("hidden"); 
+        gameContainer.classList.remove("hidden"); 
+        generateBingoGrid(); 
     });
 });
-

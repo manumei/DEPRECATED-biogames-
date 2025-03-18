@@ -38,6 +38,7 @@
         <div id="menu" class="menu-container">
             <h2 class="menu-title"><span class="green">TAXO</span> BINGO</h2>
             
+            <!-- menu -->
             <div class="menu-content-container"> <!-- Image & text side by side -->
                 <img src="assets/img/taxo-cover.png" alt="Taxo-Bingo Cover" class="menu-image">
                 
@@ -56,9 +57,17 @@
             </div>
         </div>
         
-        <div id="bingo-grid" class="grid-container hidden">
-            <!-- The grid will be populated dynamically -->
-        </div>        
+        <!-- GAME SCREEN (Hidden by Default) -->
+        <div id="game-container" class="hidden">
+            <div id="organism-container">  <!-- This is now hidden initially -->
+                <span id="organism-text">Organism: ???</span>
+                <button id="skip-button">Skip</button>
+            </div>
+            <div id="bingo-grid">
+                <!-- Grid cells will be filled by JS -->
+            </div>
+        </div>
+
         
     </main>
 
