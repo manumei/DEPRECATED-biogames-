@@ -42,6 +42,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Orders (Arachnida)
         "Araneae", "Scorpiones", "Opiliones", "Acari",
+
+        // Orders (Insecta)
+        "Coleoptera", "Lepidoptera", "Diptera", "Hymenoptera", "Hemiptera",
+
+        // Orders (Reptilia)
+        "Squamata", "Testudines", "Crocodylia",
+
+        // Orders (Mammalia)
+        "Primates", "Carnivora", "Rodentia", "Artiodactyla", "Perissodactyla", "Chiroptera", "Cetacea"
     ];
 
     function generateBingoGrid() {
