@@ -56,7 +56,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Divided Lists
     const tx_Domains = ["Bacteria", "Archaea", "Eukaryota"];
     const tx_Kingdoms = ["Animalia", "Plantae", "Fungi", "Protista"];
-    const tx_PhylaAnimalia = ["Porifera", "Cnidaria", "Platyhelminthes", "Nematoda", "Annelida", "Chordata", "Arthropoda", "Echinodermata", "Mollusca"];
+    const tx_PhylaAnimalia = ["Porifera", "Cnidaria", "Platyhelminthes", "Nematoda", 
+                            "Annelida", "Chordata", "Arthropoda", "Echinodermata", "Mollusca"];
     const tx_PhylaPlantae = ["Bryophyta", "Pteridophyta", "Gymnospermae", "Angiospermae"];
     const tx_PhylaFungi = ["Zygomycota", "Ascomycota", "Basidiomycota"];
     const tx_ClassesChordata = ["Mammalia", "Aves", "Reptilia", "Amphibia", "Chondrichthyes", "Osteichthyes"];
