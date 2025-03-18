@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "Zygomycota", "Ascomycota", "Basidiomycota",
 
         // Classes (Chordata)
-        "Mammalia", "Aves", "Reptilia", "Amphibia", "Agnatha", "Chondrichthyes", "Osteichthyes",
+        "Mammalia", "Aves", "Reptilia", "Amphibia", "Chondrichthyes", "Osteichthyes",
 
         // Classes (Arthropoda)
         "Arachnida", "Insecta", "Crustacea", "Myriapoda",
@@ -52,6 +52,24 @@ document.addEventListener("DOMContentLoaded", () => {
         // Orders (Mammalia)
         "Primates", "Carnivora", "Rodentia", "Artiodactyla", "Perissodactyla", "Chiroptera", "Cetacea"
     ];
+
+    // Divided Lists
+    const tx_Domains = ["Bacteria", "Archaea", "Eukaryota"];
+    const tx_Kingdoms = ["Animalia", "Plantae", "Fungi", "Protista"];
+    const tx_PhylaAnimalia = ["Porifera", "Cnidaria", "Platyhelminthes", "Nematoda", "Annelida", "Chordata", "Arthropoda", "Echinodermata", "Mollusca"];
+    const tx_PhylaPlantae = ["Bryophyta", "Pteridophyta", "Gymnospermae", "Angiospermae"];
+    const tx_PhylaFungi = ["Zygomycota", "Ascomycota", "Basidiomycota"];
+    const tx_ClassesChordata = ["Mammalia", "Aves", "Reptilia", "Amphibia", "Chondrichthyes", "Osteichthyes"];
+    const tx_ClassesArthropoda = ["Arachnida", "Insecta", "Crustacea", "Myriapoda"];
+    const tx_ClassesMollusca = ["Gastropoda", "Bivalvia", "Cephalopoda"];
+    const tx_ClassesAnnelida = ["Oligochaeta", "Polychaeta", "Hirudinea"];
+    const tx_ClassesEchinodermata = ["Asteroidea", "Echinoidea", "Holothuroidea"];
+    const tx_ClassesCnidaria = ["Hydrozoa", "Scyphozoa", "Anthozoa", "Cubozoa"];
+    const tx_OrdersArachnida = ["Araneae", "Scorpiones", "Opiliones", "Acari"];
+    const tx_OrdersInsecta = ["Coleoptera", "Lepidoptera", "Diptera", "Hymenoptera", "Hemiptera"];
+    const tx_OrdersReptilia = ["Squamata", "Testudines", "Crocodylia"];
+    const tx_OrdersMammalia = ["Primates", "Carnivora", "Rodentia", "Artiodactyla", "Perissodactyla", "Chiroptera", "Cetacea"];
+    
 
     function generateBingoGrid() {
         bingoGrid.innerHTML = "";
