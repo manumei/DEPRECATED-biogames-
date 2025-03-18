@@ -6,10 +6,42 @@ document.addEventListener("DOMContentLoaded", () => {
     const bingoGrid = document.getElementById("bingo-grid");
 
     const taxonomicCategories = [
-        "Mollusca", "Bacteria", "Angiosperma", "Arachnida", "Protista",
-        "Chordata", "Cnidaria", "Echinodermata", "Platyhelminthes", "Annelida",
-        "Fungi", "Arthropoda", "Mammalia", "Aves", "Reptilia", "Amphibia",
-        "Nematoda", "Bryophyta", "Gymnosperma", "Porifera"
+        // Domains
+        "Bacteria", "Archaea", "Eukaryota",
+
+        // Kingdoms
+        "Animalia", "Plantae", "Fungi", "Protista",
+
+        // Phyla (Animalia)
+        "Porifera", "Cnidaria", "Platyhelminthes", "Nematoda", "Annelida",
+        "Chordata", "Arthropoda", "Echinodermata", "Mollusca",
+
+        // Phyla (Plantae)
+        "Bryophyta", "Pteridophyta", "Gymnospermae", "Angiospermae",
+
+        // Phyla (Fungi)
+        "Zygomycota", "Ascomycota", "Basidiomycota",
+
+        // Classes (Chordata)
+        "Mammalia", "Aves", "Reptilia", "Amphibia", "Agnatha", "Chondrichthyes", "Osteichthyes",
+
+        // Classes (Arthropoda)
+        "Arachnida", "Insecta", "Crustacea", "Myriapoda",
+
+        // Classes (Mollusca)
+        "Gastropoda", "Bivalvia", "Cephalopoda",
+
+        // Classes (Annaelida)
+        "Oligochaeta", "Polychaeta", "Hirudinea",
+
+        // Classes (Echinodermata)
+        "Asteroidea", "Echinoidea", "Holothuroidea",
+
+        // Classes (Cnidaria)
+        "Hydrozoa", "Scyphozoa", "Anthozoa", "Cubozoa",
+
+        // Orders (Arachnida)
+        "Araneae", "Scorpiones", "Opiliones", "Acari",
     ];
 
     function generateBingoGrid() {
