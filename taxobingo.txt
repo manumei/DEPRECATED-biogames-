@@ -1,3 +1,4 @@
 CATEGORIES ORGANISM AMOUNT
-Bacteria: 9
-Archaea: 9
+Bacteria: 10
+Archaea: 0 :/
+All other divisions: 5 each
