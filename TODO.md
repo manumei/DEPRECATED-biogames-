@@ -13,3 +13,9 @@ Step 4: Skip Button functionality
 Step 5: Give Up Flag Button below the grid
 
 Step 6: Daily Refresh
+
+Step 7: Expand Database, automatizarlo, thousands of images...
+
+## Disease TicTacToe
+
+## Bio Top8
