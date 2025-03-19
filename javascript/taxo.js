@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ];
 
     // Divided Lists
-    const tx_Domains = ["Bacteria", "Archaea", "Eukaryota"];
+    const tx_Domains = ["Bacteria", "Eukaryota"]; // archaea not included for now cause hard to distinguish for most people
     const tx_Kingdoms = ["Animalia", "Plantae", "Fungi", "Protista"];
     const tx_PhylaAnimalia = ["Porifera", "Cnidaria", "Platyhelminthes", "Nematoda", 
                             "Annelida", "Chordata", "Arthropoda", "Echinodermata", "Mollusca"];

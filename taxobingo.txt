@@ -1,0 +1,3 @@
+CATEGORIES ORGANISM AMOUNT
+Bacteria: 9
+Archaea: 9
