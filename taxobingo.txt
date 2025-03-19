@@ -1,0 +1,4 @@
+CATEGORIES ORGANISM AMOUNT
+Bacteria: 10
+Archaea: 0 :/
+All other divisions: 5 each

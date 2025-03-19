@@ -22,8 +22,9 @@
     padding: 8px 15px;
     font-size: 16px;
     cursor: pointer;
-    background-color: #ff5555;
-    color: white;
+    background-color: #ff9e2e;
+    font-weight: 500;
+    color: black;
     border: none;
     border-radius: 5px;
 }
@@ -37,7 +38,8 @@
 }
 
 .grid-cell {
-    background-color: #ddd;
+    background-color: #b9f596c9;
+    color: black;
     padding: 1rem;
     text-align: center;
     width: 6rem;
@@ -47,5 +49,5 @@
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    border: 1px solid black;
+    border: 1.5px solid rgb(21, 255, 21);
 }
