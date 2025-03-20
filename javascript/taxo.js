@@ -19,9 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
         // Phyla (Plantae)
         "Bryophyta", "Pteridophyta", "Gymnospermae", "Angiospermae",
 
-        // Phyla (Fungi)
-        "Zygomycota", "Ascomycota", "Basidiomycota",
-
         // Classes (Chordata)
         "Mammalia", "Aves", "Reptilia", "Amphibia", "Chondrichthyes", "Osteichthyes",
 
@@ -59,7 +56,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const tx_PhylaAnimalia = ["Porifera", "Cnidaria", "Platyhelminthes", "Nematoda", 
                             "Annelida", "Chordata", "Arthropoda", "Echinodermata", "Mollusca"];
     const tx_PhylaPlantae = ["Bryophyta", "Pteridophyta", "Gymnospermae", "Angiospermae"];
-    const tx_PhylaFungi = ["Zygomycota", "Ascomycota", "Basidiomycota"];
     const tx_ClassesChordata = ["Mammalia", "Aves", "Reptilia", "Amphibia", "Chondrichthyes", "Osteichthyes"];
     const tx_ClassesArthropoda = ["Arachnida", "Insecta", "Crustacea", "Myriapoda"];
     const tx_ClassesMollusca = ["Gastropoda", "Bivalvia", "Cephalopoda"];
@@ -81,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
         // Flatten remaining lists into a single array
         const remainingCategories = [
-            ...tx_PhylaAnimalia, ...tx_PhylaPlantae, ...tx_PhylaFungi,
+            ...tx_PhylaAnimalia, ...tx_PhylaPlantae,
             ...tx_ClassesChordata, ...tx_ClassesArthropoda, ...tx_ClassesMollusca,
             ...tx_ClassesAnnelida, ...tx_ClassesEchinodermata, ...tx_ClassesCnidaria,
             ...tx_OrdersArachnida, ...tx_OrdersInsecta, ...tx_OrdersReptilia, ...tx_OrdersMammalia
