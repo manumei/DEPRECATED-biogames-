@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const taxonomicCategories = [
         // Domains
-        "Bacteria", "Archaea", "Eukaryota",
+        "Bacteria", "Eukaryota",
 
         // Kingdoms
         "Animalia", "Plantae", "Fungi", "Protista",
@@ -28,23 +28,20 @@ document.addEventListener("DOMContentLoaded", () => {
         // Classes (Mollusca)
         "Gastropoda", "Bivalvia", "Cephalopoda",
 
-        // Classes (Annaelida)
-        "Oligochaeta", "Polychaeta", "Hirudinea",
-
         // Classes (Echinodermata)
-        "Asteroidea", "Echinoidea", "Holothuroidea",
+        // "Asteroidea", "Echinoidea", "Holothuroidea",
 
         // Classes (Cnidaria)
-        "Hydrozoa", "Scyphozoa", "Anthozoa", "Cubozoa",
+        // "Hydrozoa", "Scyphozoa", "Anthozoa", "Cubozoa",
 
         // Orders (Arachnida)
-        "Araneae", "Scorpiones", "Acari",
+        "Araneae", "Scorpiones", "Acari", 
 
         // Orders (Insecta)
         "Coleoptera", "Lepidoptera", "Diptera", "Hymenoptera", "Hemiptera",
 
         // Orders (Reptilia)
-        "Squamata", "Testudines", "Crocodylia",
+        "Squamata", "Testudines", "Crocodilia",
 
         // Orders (Mammalia)
         "Primates", "Carnivora", "Rodentia", "Artiodactyla", "Perissodactyla", "Chiroptera", "Cetacea"
@@ -59,12 +56,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const tx_ClassesChordata = ["Mammalia", "Aves", "Reptilia", "Amphibia", "Chondrichthyes", "Osteichthyes"];
     const tx_ClassesArthropoda = ["Arachnida", "Insecta", "Crustacea", "Myriapoda"];
     const tx_ClassesMollusca = ["Gastropoda", "Bivalvia", "Cephalopoda"];
-    const tx_ClassesAnnelida = ["Oligochaeta", "Polychaeta", "Hirudinea"];
-    const tx_ClassesEchinodermata = ["Asteroidea", "Echinoidea", "Holothuroidea"];
-    const tx_ClassesCnidaria = ["Hydrozoa", "Scyphozoa", "Anthozoa", "Cubozoa"];
+    //  const tx_ClassesEchinodermata = ["Asteroidea", "Echinoidea", "Holothuroidea"];
+    //  const tx_ClassesCnidaria = ["Hydrozoa", "Scyphozoa", "Anthozoa", "Cubozoa"];
     const tx_OrdersArachnida = ["Araneae", "Scorpiones", "Acari"];
     const tx_OrdersInsecta = ["Coleoptera", "Lepidoptera", "Diptera", "Hymenoptera", "Hemiptera"];
-    const tx_OrdersReptilia = ["Squamata", "Testudines", "Crocodylia"];
+    const tx_OrdersReptilia = ["Squamata", "Testudines", "Crocodilia"];
     const tx_OrdersMammalia = ["Primates", "Carnivora", "Rodentia", "Artiodactyla", "Perissodactyla", "Chiroptera", "Cetacea"];
     
 
@@ -79,8 +75,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const remainingCategories = [
             ...tx_PhylaAnimalia, ...tx_PhylaPlantae,
             ...tx_ClassesChordata, ...tx_ClassesArthropoda, ...tx_ClassesMollusca,
-            ...tx_ClassesAnnelida, ...tx_ClassesEchinodermata, ...tx_ClassesCnidaria,
-            ...tx_OrdersArachnida, ...tx_OrdersInsecta, ...tx_OrdersReptilia, ...tx_OrdersMammalia
+            ...tx_ClassesAnnelida, ...tx_OrdersArachnida, ...tx_OrdersInsecta, 
+            ...tx_OrdersReptilia, ...tx_OrdersMammalia
         ];
     
         // Shuffle and pick 10 random categories
