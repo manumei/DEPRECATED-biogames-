@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "Hydrozoa", "Scyphozoa", "Anthozoa", "Cubozoa",
 
         // Orders (Arachnida)
-        "Araneae", "Scorpiones", "Opiliones", "Acari",
+        "Araneae", "Scorpiones", "Acari",
 
         // Orders (Insecta)
         "Coleoptera", "Lepidoptera", "Diptera", "Hymenoptera", "Hemiptera",
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const tx_ClassesAnnelida = ["Oligochaeta", "Polychaeta", "Hirudinea"];
     const tx_ClassesEchinodermata = ["Asteroidea", "Echinoidea", "Holothuroidea"];
     const tx_ClassesCnidaria = ["Hydrozoa", "Scyphozoa", "Anthozoa", "Cubozoa"];
-    const tx_OrdersArachnida = ["Araneae", "Scorpiones", "Opiliones", "Acari"];
+    const tx_OrdersArachnida = ["Araneae", "Scorpiones", "Acari"];
     const tx_OrdersInsecta = ["Coleoptera", "Lepidoptera", "Diptera", "Hymenoptera", "Hemiptera"];
     const tx_OrdersReptilia = ["Squamata", "Testudines", "Crocodylia"];
     const tx_OrdersMammalia = ["Primates", "Carnivora", "Rodentia", "Artiodactyla", "Perissodactyla", "Chiroptera", "Cetacea"];
