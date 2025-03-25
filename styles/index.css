@@ -8,13 +8,15 @@ main {
 
 /* Panel button styles */
 .panel {
-    width: 35rem;
-    padding: 4rem;
+    width: 22rem;
+    padding: 4.5rem;
     margin: 1.5rem 0;
     text-align: center;
-    background-color: rgb(107, 177, 60);
+    /* background-color: rgb(107, 177, 60); */
+    background-color: rgba(0, 177, 0, 0.75);
+    /* background: url("../assets/img/plant-border.png") center/cover no-repeat, rgba(0, 128, 0, 0.7); */
     border-radius: 3rem;
-    font-size: 2.4rem;
+    font-size: 2rem;
     font-weight: bold;
     text-decoration: none;
     color: rgb(0, 0, 0);
@@ -26,4 +28,5 @@ main {
 .panel:hover {
     background-color: rgb(72, 138, 28);
     transform: scale(1.05);
+    background-size: 100%;
 }
