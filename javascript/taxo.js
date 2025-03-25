@@ -64,47 +64,36 @@ document.addEventListener("DOMContentLoaded", () => {
     const tx_OrdersMammalia = ["Primates", "Carnivora", "Rodentia", "Artiodactyla", "Perissodactyla", "Chiroptera", "Cetacea"];
     
 
-    function generateBingoGrid() {
-        bingoGrid.innerHTML = ""; // Clear previous grid
-    
-        // Ensure 1 domain and 1 kingdom are always included
-        const domainCategory = tx_Domains[Math.floor(Math.random() * tx_Domains.length)];
-        const kingdomCategory = tx_Kingdoms[Math.floor(Math.random() * tx_Kingdoms.length)];
-    
-        // Flatten remaining lists into a single array
-        const remainingCategories = [
-            ...tx_PhylaAnimalia, ...tx_PhylaPlantae,
-            ...tx_ClassesChordata, ...tx_ClassesArthropoda, ...tx_ClassesMollusca,
-            ...tx_OrdersArachnida, ...tx_OrdersInsecta, 
-            ...tx_OrdersReptilia, ...tx_OrdersMammalia
-        ];
-    
-        // Shuffle and pick 10 random categories
-        const shuffled = remainingCategories.sort(() => 0.5 - Math.random());
-        const selectedCategories = shuffled.slice(0, 10);
-    
-        // Combine guaranteed selections with random ones
-        const finalCategories = [domainCategory, kingdomCategory, ...selectedCategories];
-    
-        // Shuffle final list to distribute the domain/kingdom categories randomly
-        finalCategories.sort(() => 0.5 - Math.random());
-    
-        // Create grid cells
-        finalCategories.forEach(category => {
-            const cell = document.createElement("div");
-            cell.classList.add("grid-cell");
-            cell.textContent = category;
-            bingoGrid.appendChild(cell);
-        });
-    }
+
 
     startGameBtn.addEventListener("click", () => {
         menu.classList.add("hidden"); 
         gameContainer.classList.remove("hidden"); 
-        generateBingoGrid(); 
+        generateBingoGrid();
+        showRandomOrganism();
+    });
+});
+
+let organisms = [];
+let currentOrganism = null;
+
+// Load organism data from file
+fetch("assets/data/taxo_organisms.txt")
+    .then(response => response.text())
+    .then(text => {
+        organisms = text.trim().split("\n").map(line => {
+            const [name, categoryString] = line.split(", {");
+            const categories = categoryString
+                .replace("}", "")
+                .split(",")
+                .map(cat => cat.trim().toLowerCase());
+            return { name: name.trim(), categories };
+        });
     });
 
-    
+function showRandomOrganism() {
+    if (organisms.length === 0) return;
+    currentOrganism = organisms[Math.floor(Math.random() * organisms.length)];
+    organismText.textContent = currentOrganism.name;
+}
 
-
-});

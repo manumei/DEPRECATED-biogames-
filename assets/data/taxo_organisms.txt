@@ -1,0 +1,4 @@
+Treponem Palidium, {bacteria}
+Bambusa Spp, {eukaryota, plantae, angiospermae}
+Homo Sapiens, {eukaryota, animalia, chordata, mammalia, primates}
+Agaricus Bisporus, {eukaryota, fungi}
