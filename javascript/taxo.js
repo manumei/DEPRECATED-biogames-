@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const remainingCategories = [
             ...tx_PhylaAnimalia, ...tx_PhylaPlantae,
             ...tx_ClassesChordata, ...tx_ClassesArthropoda, ...tx_ClassesMollusca,
-            ...tx_ClassesAnnelida, ...tx_OrdersArachnida, ...tx_OrdersInsecta, 
+            ...tx_OrdersArachnida, ...tx_OrdersInsecta, 
             ...tx_OrdersReptilia, ...tx_OrdersMammalia
         ];
     
@@ -103,4 +103,8 @@ document.addEventListener("DOMContentLoaded", () => {
         gameContainer.classList.remove("hidden"); 
         generateBingoGrid(); 
     });
+
+    
+
+
 });
