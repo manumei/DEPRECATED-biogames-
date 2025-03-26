@@ -10,11 +10,16 @@ Step 3: Organisms appear, clicking correct cell puts them there and makes them s
 
 Step 4: Skip Button functionality
 
-Step 5: Give Up Flag Button below the grid
+Step 5: Flling all wins the game
 
-Step 6: Daily Refresh
+Step 6: Give Up Flag Button below the grid
 
-Step 7: Expand Database, automatizarlo, thousands of images...
+Step 7: Progress is saved (until daily reset), entering on the same day doesnt lead to the panel menu, it leads
+directly to the already-started game to continue filling the cells. If it has been won, leads directly to the "you won" screen.
+
+Step 8: Daily Refresh
+
+Step 9: Expand Database, automatizarlo, thousands of images...
 
 ## Disease TicTacToe
 

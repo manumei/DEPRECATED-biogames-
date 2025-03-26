@@ -50,4 +50,12 @@
     align-items: center;
     font-weight: bold;
     border: 1.5px solid rgb(21, 255, 21);
+    cursor: pointer;
+}
+
+.crossed-out {
+    text-decoration: line-through;
+    background-color: #6aff6a7b;
+    color: gray;
+    pointer-events: none; /* disables clicks */
 }
