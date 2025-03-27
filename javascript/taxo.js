@@ -1,19 +1,24 @@
 let organisms = [];
 let currentOrganism = null;
 
-// Load organism data from file
 fetch("assets/data/taxo_organisms.txt")
     .then(response => response.text())
     .then(text => {
         organisms = text.trim().split("\n").map(line => {
-            const [name, categoryString] = line.split(", {");
-            const categories = categoryString
-                .replace("}", "")
+            const parts = line.split(", {");
+            const name = parts[0].trim();
+            const categoriesPart = parts[1].split("},")[0];
+            const categories = categoriesPart
                 .split(",")
                 .map(cat => cat.trim().toLowerCase());
-            return { name: name.trim(), categories };
+            const imagePath = line.split("},")[1]
+                .replace("{", "")
+                .replace("}", "")
+                .trim();
+            return { name, categories, imagePath };
         });
     });
+
 
 // Get a random organism from the list
 function getRandomOrganism() {
@@ -22,6 +27,7 @@ function getRandomOrganism() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+    const organismImg = document.getElementById("organism-img");
     const startGameBtn = document.getElementById("start-game-btn");
     const menu = document.getElementById("menu");
     const gameContainer = document.getElementById("game-container");
@@ -80,8 +86,10 @@ document.addEventListener("DOMContentLoaded", () => {
         currentOrganism = getRandomOrganism();
         if (currentOrganism) {
             organismText.textContent = currentOrganism.name;
+            organismImg.src = currentOrganism.imagePath;
+            organismImg.alt = currentOrganism.name;
         }
-    }
+    }    
 
     startGameBtn.addEventListener("click", () => {
         menu.classList.add("hidden");

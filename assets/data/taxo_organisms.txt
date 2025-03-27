@@ -1,4 +1,4 @@
-Treponem Palidium, {bacteria}
-Bambusa Spp, {eukaryota, plantae, angiospermae}
-Homo Sapiens, {eukaryota, animalia, chordata, mammalia, primates}
-Agaricus Bisporus, {eukaryota, fungi}
+Treponem Palidium, {bacteria}, {assets/webp/taxo/bacteria/treponem_palidium.webp}
+Bambusa Spp, {eukaryota, plantae, angiospermae}, {assets/webp/taxo/eukaryota/plantae/angiospermae/bambusa_spp.webp}
+Homo Sapiens, {eukaryota, animalia, chordata, mammalia, primates}, {assets/webp/taxo/eukaryota/animalia/chordata/mammalia/primates/homo_sapiens.webp}
+Agaricus Bisporus, {eukaryota, fungi}, {assets/webp/taxo/eukaryota/fungi/agaricus_bisporus.png/agaricus_bisporus.webp}
