@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const tx_ClassesArthropoda = ["Arachnida", "Insecta", "Crustacea", "Myriapoda"];
     const tx_ClassesMollusca = ["Gastropoda", "Bivalvia", "Cephalopoda"];
     const tx_OrdersArachnida = ["Araneae", "Scorpiones", "Acari"];
-    const tx_OrdersInsecta = ["Coleoptera", "Lepidoptera", "Diptera", "Hymenoptera", "Hemiptera"];
+    const tx_OrdersInsecta = ["Coleoptera", "Lepidoptera", "Diptera", "Hymenoptera", "Hemiptera", "Dictyoptera"];
     const tx_OrdersReptilia = ["Squamata", "Testudines", "Crocodilia"];
     const tx_OrdersMammalia = ["Primates", "Carnivora", "Rodentia", "Artiodactyla", "Perissodactyla", "Chiroptera", "Cetacea"];
 
