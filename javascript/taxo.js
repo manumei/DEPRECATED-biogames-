@@ -1,7 +1,7 @@
 let organisms = [];
 let currentOrganism = null;
 
-fetch("assets/data/taxo_organisms.txt")
+fetch("assets/data/taxonomy.txt")
     .then(response => response.text())
     .then(text => {
         organisms = text.trim().split("\n").map(line => {
