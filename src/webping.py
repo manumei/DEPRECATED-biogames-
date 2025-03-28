@@ -28,13 +28,18 @@ for dirpath, dirnames, filenames in os.walk(tree_root):
                 formatted_name = base_name.replace("_", " ").title()  # Agaricus Bisporus
                 organism_dict[formatted_name] = taxonomy_path
 
-# ✅ Print a few entries for verification
-for name, path in list(organism_dict.items()):
-    print(f"{name} → {path}")
+### COUNTER DE CUANTAS IMAGENES LLEVO HASTA AHORA
+# counter = 0
+# # ✅ Print a few entries for verification
+# for name, path in list(organism_dict.items()):
+#     counter += 1
+#     print(f"{name} → {path}")
+
+# print(f"There are a total of {counter} organisms so far...")
 
 
 
-# Step 3: webp
+# Step 3: webp convertion
 
 
 
