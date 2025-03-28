@@ -64,7 +64,7 @@ def webp_transformer(webp_root, img_root):
         print(Fore.GREEN + Style.BRIGHT + "✅ All images converted successfully" + Style.RESET_ALL)
 
 # Clearing Function
-def clear_webps_taxo(webp_root):
+def clear_webps(webp_root):
     deleted_files = 0
     for dirpath, dirnames, filenames in os.walk(webp_root):
         if not dirnames and filenames:  # It's a leaf folder with files
@@ -97,10 +97,12 @@ webp_root_top8 = os.path.join(root_dir, "assets", "webp", "top8")
 
 # Taxo
 # webp_transformer(webp_root_taxo, img_root_taxo)
-clear_webps_taxo(webp_root_taxo)
+# clear_webps(webp_root_taxo)
 
 # TicTac
 # webp_transformer(webp_root_tictac, img_root_tictac)
+# clear_webps(webp_root_tictac)
 
 # Top8
 # webp_transformer(webp_root_top8, img_root_top8)
+# clear_webps(webp_root_top8)
