@@ -27,6 +27,8 @@ function getRandomOrganism() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+    const zoomBtn = document.getElementById("zoom-btn");
+
     const organismImg = document.getElementById("organism-img");
     const startGameBtn = document.getElementById("start-game-btn");
     const menu = document.getElementById("menu");
@@ -98,5 +100,23 @@ document.addEventListener("DOMContentLoaded", () => {
         gameContainer.classList.remove("hidden");
         generateBingoGrid();
         showRandomOrganism();  // ← show one organism when game starts
+    });
+
+    zoomBtn.addEventListener("click", () => {
+        if (!currentOrganism) return;
+    
+        const overlay = document.createElement("div");
+        overlay.id = "zoom-overlay";
+    
+        const zoomedImg = document.createElement("img");
+        zoomedImg.src = currentOrganism.imagePath;
+        zoomedImg.alt = currentOrganism.name;
+    
+        overlay.appendChild(zoomedImg);
+        document.body.appendChild(overlay);
+    
+        overlay.addEventListener("click", () => {
+            document.body.removeChild(overlay);
+        });
     });
 });
