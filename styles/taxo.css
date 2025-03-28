@@ -26,7 +26,7 @@
     text-align: center;
     width: 6.5rem;
     height: 5.5rem;
-    font-size: 1.1rem;
+    font-size: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,15 +75,16 @@
 }
 
 @keyframes shakeRed {
-    0%   { transform: translateX(0); background-color: #ffdddd; }
-    25%  { transform: translateX(-5px); }
-    50%  { transform: translateX(5px); }
-    75%  { transform: translateX(-3px); }
+    0%   { transform: translateX(0); background-color: #ff2525; }
+    20%  { transform: translateX(-6px); }
+    40%  { transform: translateX(6px); }
+    60%  { transform: translateX(-4px); }
+    80%  { transform: translateX(4px); }
     100% { transform: translateX(0); background-color: transparent; }
 }
 
 .shake-wrong {
-    animation: shakeRed 0.3s ease;
+    animation: shakeRed 0.7s ease;
 }
 
 
@@ -110,11 +111,12 @@
 }
 
 #skip-button {
-    padding: 8px 15px;
-    font-size: 16px;
+    margin-left: -1rem;
+    padding: 0.7rem 1.2rem;
+    font-size: 1rem;
     cursor: pointer;
     background-color: #ff9e2e;
-    font-weight: 500;
+    font-weight: bold;
     color: black;
     border: none;
     border-radius: 5px;

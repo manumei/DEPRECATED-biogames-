@@ -93,6 +93,12 @@ document.addEventListener("DOMContentLoaded", () => {
                     cell.removeEventListener("click", handleClick);
             
                     // Step 3 will go here
+                } else {
+                    // 👇 Add shake-red animation
+                    cell.classList.add("shake-wrong");
+                    setTimeout(() => {
+                        cell.classList.remove("shake-wrong");
+                    }, 700); // duration of the animation
                 }
             });            
     
