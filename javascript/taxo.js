@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const tx_Kingdoms = ["Animalia", "Plantae", "Fungi", "Protista"];
     const tx_PhylaAnimalia = ["Porifera", "Cnidaria", "Platyhelminthes", "Nematoda", 
                             "Annelida", "Chordata", "Arthropoda", "Echinodermata", "Mollusca"];
-    const tx_PhylaPlantae = ["Bryophyta", "Pteridophyta", "Gymnospermae", "Angiospermae"];
+    const tx_PhylaPlantae = ["Bryophyta", "Pteridophyta", "Gymnospermae"]; // anGOATspermae ya esta puesta sola
     const tx_ClassesChordata = ["Mammalia", "Aves", "Reptilia", "Amphibia", "Chondrichthyes", "Osteichthyes"];
     const tx_ClassesArthropoda = ["Arachnida", "Insecta", "Crustacea", "Myriapoda"];
     const tx_ClassesMollusca = ["Gastropoda", "Bivalvia", "Cephalopoda"];
@@ -73,15 +73,29 @@ document.addEventListener("DOMContentLoaded", () => {
             cell.textContent = category;
         
             // Add click behavior
-            cell.addEventListener("click", () => {
+            cell.addEventListener("click", function handleClick() {
                 const catName = category.toLowerCase();
                 if (currentOrganism && currentOrganism.categories.includes(catName)) {
-                    cell.classList.add("crossed-out");
-                    cell.removeEventListener("click", () => {}); // disables further action
-                    // next organism will be handled in Step 3
+                    cell.classList.add("filled-cell");
+                    cell.innerHTML = "";
+            
+                    const label = document.createElement("div");
+                    label.className = "filled-label";
+                    label.textContent = category;
+                    cell.appendChild(label);
+            
+                    const img = document.createElement("img");
+                    img.className = "filled-image";
+                    img.src = currentOrganism.imagePath;
+                    img.alt = currentOrganism.name;
+                    cell.appendChild(img);
+            
+                    cell.removeEventListener("click", handleClick);
+            
+                    // Step 3 will go here
                 }
-            });
-        
+            });            
+    
             bingoGrid.appendChild(cell);
         });
     }
@@ -111,7 +125,19 @@ document.addEventListener("DOMContentLoaded", () => {
         const zoomedImg = document.createElement("img");
         zoomedImg.src = currentOrganism.imagePath;
         zoomedImg.alt = currentOrganism.name;
-    
+
+        zoomedImg.onload = () => {
+            const aspectRatio = zoomedImg.naturalWidth / zoomedImg.naturalHeight;
+        
+            if (aspectRatio >= 1) {
+                // Wider than tall — expand width
+                zoomedImg.classList.add("expand-width");
+            } else {
+                // Taller than wide — expand height
+                zoomedImg.classList.add("expand-height");
+            }
+        };        
+
         overlay.appendChild(zoomedImg);
         document.body.appendChild(overlay);
     

@@ -10,27 +10,9 @@
     margin-top: 30px;
 }
 
-#organism-container {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-#skip-button {
-    padding: 8px 15px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #ff9e2e;
-    font-weight: 500;
-    color: black;
-    border: none;
-    border-radius: 5px;
-}
-
 #bingo-grid {
-    margin-top: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -42,8 +24,8 @@
     color: whitesmoke;
     padding: 1rem;
     text-align: center;
-    width: 7rem;
-    height: 6rem;
+    width: 6.5rem;
+    height: 5.5rem;
     font-size: 1.1rem;
     display: flex;
     justify-content: center;
@@ -60,11 +42,82 @@
     pointer-events: none; /* disables clicks */
 }
 
+.filled-cell {
+    background-color: #d6f9c5 !important;
+    border: 2px solid #00ff55 !important;
+    position: relative;
+    pointer-events: none;
+    padding: 1rem; /* Match the padding of .grid-cell */
+    width: 6.5rem; /* Match the width of .grid-cell */
+    height: 5.5rem; /* Match the height of .grid-cell */
+    overflow: hidden;
+}
+
+/* Category label (top-left) */
+.filled-label {
+    position: absolute;
+    top: 4px;
+    left: 6px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #2d6b1f;
+}
+
+/* Organism image (bottom-right) */
+.filled-image {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    width: 5.75rem;
+    height: 5.75rem;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+@keyframes shakeRed {
+    0%   { transform: translateX(0); background-color: #ffdddd; }
+    25%  { transform: translateX(-5px); }
+    50%  { transform: translateX(5px); }
+    75%  { transform: translateX(-3px); }
+    100% { transform: translateX(0); background-color: transparent; }
+}
+
+.shake-wrong {
+    animation: shakeRed 0.3s ease;
+}
+
+
+/* Organism Name & Image and Stuff */
+
 #organism-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 0;
+}
+
+#organism-info {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
+}
+
+#organism-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 0.4rem;
+}
+
+#skip-button {
+    padding: 8px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #ff9e2e;
+    font-weight: 500;
+    color: black;
+    border: none;
+    border-radius: 5px;
 }
 
 #organism-img {
@@ -80,7 +133,7 @@
 #organism-text {
     font-size: 1.2rem;
     font-weight: bold;
-    margin-bottom: 0rem;
+    margin-bottom: 0;
 }
 
 #organism-image-wrapper {
@@ -117,14 +170,31 @@
     z-index: 999;
 }
 
+@keyframes zoomFade {
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 #zoom-overlay img {
-    width: 75vw;
-    height: 75vh;
     border-radius: 8px;
-    box-shadow: 0 0 25px rgba(0, 255, 0, 0.4);
-    border: 2px solid limegreen;
-    background-color: white;
     object-fit: contain;
     padding: 0.5rem;
     cursor: zoom-out;
+    animation: zoomFade 0.25s ease-out;
+}
+
+.expand-width {
+    width: 60vw;
+    height: auto;
+}
+
+.expand-height {
+    height: 60vh;
+    width: auto;
 }
