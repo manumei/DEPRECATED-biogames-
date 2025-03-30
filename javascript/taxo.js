@@ -28,13 +28,14 @@ function getRandomOrganism() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+    const startGameBtn = document.getElementById("start-game-btn");
     const zoomBtn = document.getElementById("zoom-btn");
+    const skipBtn = document.getElementById("skip-button");
 
     const organismImg = document.getElementById("organism-img");
-    const startGameBtn = document.getElementById("start-game-btn");
+    const organismText = document.getElementById("organism-text");
     const menu = document.getElementById("menu");
     const gameContainer = document.getElementById("game-container");
-    const organismText = document.getElementById("organism-text");
     const bingoGrid = document.getElementById("bingo-grid");
 
     const tx_Domains = ["Bacteria", "Eukaryota"];
@@ -49,7 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const tx_OrdersInsecta = ["Coleoptera", "Lepidoptera", "Diptera", "Hymenoptera", "Hemiptera", "Dictyoptera"];
     const tx_OrdersReptilia = ["Squamata", "Testudines", "Crocodilia"];
     const tx_OrdersMammalia = ["Primates", "Carnivora", "Rodentia", "Artiodactyla", "Perissodactyla", "Chiroptera", "Cetacea"];
-
     const angiosperma = "Angiospermae";
 
     function generateBingoGrid() {
@@ -161,5 +161,9 @@ document.addEventListener("DOMContentLoaded", () => {
         overlay.addEventListener("click", () => {
             document.body.removeChild(overlay);
         });
+    });
+
+    skipBtn.addEventListener("click", () => {
+        showRandomOrganism();
     });
 });
