@@ -9,6 +9,7 @@ fetch("assets/data/taxonomy.txt")
             const name = parts[0].trim();
             const categoriesPart = parts[1].split("},")[0];
             const categories = categoriesPart
+                .replace(/\}/g, "") // remove all closing braces
                 .split(",")
                 .map(cat => cat.trim().toLowerCase());
             const imagePath = line.split("},")[1]
@@ -43,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const tx_PhylaPlantae = ["Bryophyta", "Pteridophyta", "Gymnospermae"]; // anGOATspermae ya esta puesta sola
     const tx_ClassesChordata = ["Mammalia", "Aves", "Reptilia", "Amphibia", "Chondrichthyes", "Osteichthyes"];
     const tx_ClassesArthropoda = ["Arachnida", "Insecta", "Crustacea", "Myriapoda"];
-    const tx_ClassesMollusca = ["Gastropoda", "Bivalvia", "Cephalopoda"];
+    // const tx_ClassesMollusca = ["Gastropoda", "Bivalvia", "Cephalopoda"];
     const tx_OrdersArachnida = ["Araneae", "Scorpiones", "Acari"];
     const tx_OrdersInsecta = ["Coleoptera", "Lepidoptera", "Diptera", "Hymenoptera", "Hemiptera", "Dictyoptera"];
     const tx_OrdersReptilia = ["Squamata", "Testudines", "Crocodilia"];
@@ -58,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const kingdomCategory = tx_Kingdoms[Math.floor(Math.random() * tx_Kingdoms.length)];
 
         const remainingCategories = [
-            ...tx_PhylaAnimalia, ...tx_PhylaPlantae, ...tx_ClassesChordata, ...tx_ClassesArthropoda, ...tx_ClassesMollusca,
+            ...tx_PhylaAnimalia, ...tx_PhylaPlantae, ...tx_ClassesChordata, ...tx_ClassesArthropoda,
             ...tx_OrdersArachnida, ...tx_OrdersInsecta, ...tx_OrdersReptilia, ...tx_OrdersMammalia
         ];
 
@@ -74,7 +75,12 @@ document.addEventListener("DOMContentLoaded", () => {
         
             // Add click behavior
             cell.addEventListener("click", function handleClick() {
-                const catName = category.toLowerCase();
+                const catName = category.trim().toLowerCase();
+
+                // 🔍 Debug logs
+                console.log("🧪 Clicked category:", catName);
+                console.log("✅ Valid categories for", currentOrganism.name, "→", currentOrganism.categories);
+
                 if (currentOrganism && currentOrganism.categories.includes(catName)) {
                     cell.classList.add("filled-cell");
                     cell.innerHTML = "";
@@ -91,7 +97,12 @@ document.addEventListener("DOMContentLoaded", () => {
                     cell.appendChild(img);
             
                     cell.removeEventListener("click", handleClick);
-            
+
+                    // 👇 Slight delay before showing the next organism
+                    setTimeout(() => {
+                        showRandomOrganism();
+                    }, 350); // milliseconds
+
                     // Step 3 will go here
                 } else {
                     // 👇 Add shake-red animation
