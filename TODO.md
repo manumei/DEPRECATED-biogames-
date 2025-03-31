@@ -12,6 +12,8 @@ Step 4: Skip Button functionality
 
 Step 5: Flling all wins the game
 
+Step 5.5: CSV rework
+
 Step 6: Timer selected at the start
 
 Step 7: Add "With Hint" button. Names only show if you chose With Hint, otherwise

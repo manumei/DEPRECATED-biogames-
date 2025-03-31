@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
             cell.classList.add("grid-cell");
             cell.textContent = category;
         
-            // Add click behavior
+            // Clicking on a bingo cell
             cell.addEventListener("click", function handleClick() {
                 const catName = category.trim().toLowerCase();
 
