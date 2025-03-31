@@ -28,6 +28,10 @@ function getRandomOrganism() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+    let filledCount = 0;
+    const winPanel = document.getElementById("win-panel");
+    const playAgainBtn = document.getElementById("play-again-btn");
+
     const startGameBtn = document.getElementById("start-game-btn");
     const zoomBtn = document.getElementById("zoom-btn");
     const skipBtn = document.getElementById("skip-button");

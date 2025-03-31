@@ -94,32 +94,41 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
-    margin-bottom: 0;
+    position: relative;
+    margin-bottom: 0.5rem;
+    min-height: 100px; /* Lock vertical height */
 }
 
 #organism-info {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    width: auto;
 }
 
 #organism-text {
     font-size: 1.2rem;
     font-weight: bold;
     margin-top: 0.4rem;
+    white-space: nowrap;      /* 👈 prevent wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis;  /* 👈 optional: show "..." if too long */
+    max-width: 280px;          /* 👈 adjust as needed */
 }
 
 #skip-button {
-    margin-left: 0rem;
-    padding: 0.7rem 1.2rem;
-    font-size: 1rem;
-    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    transform: translateX(calc(100% + 3rem));
+    padding: 8px 15px;
+    font-size: 16px;
     background-color: #ff9e2e;
-    font-weight: bold;
     color: black;
+    font-weight: 500;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 #organism-img {
@@ -195,4 +204,30 @@
     height: 80vh;
     object-fit: contain;
     border-radius: 8px;
+}
+
+#win-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 16rem;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.win-content {
+    background: #ffffff;
+    padding: 2rem 3rem;
+    border-radius: 12px;
+    text-align: center;
+    color: #333;
+    box-shadow: 0 0 25px limegreen;
+    border: 2px solid #00ff55;
+}
+
+#win-panel.hidden {
+    display: none;
 }
