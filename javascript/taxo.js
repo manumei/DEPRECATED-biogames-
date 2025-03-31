@@ -142,17 +142,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const zoomedImg = document.createElement("img");
         zoomedImg.src = currentOrganism.imagePath;
         zoomedImg.alt = currentOrganism.name;
+        zoomedImg.classList.add("zoomed-image");
 
         zoomedImg.onload = () => {
-            const aspectRatio = zoomedImg.naturalWidth / zoomedImg.naturalHeight;
-        
-            if (aspectRatio >= 1) {
-                // Wider than tall — expand width
-                zoomedImg.classList.add("expand-width");
-            } else {
-                // Taller than wide — expand height
-                zoomedImg.classList.add("expand-height");
-            }
         };        
 
         overlay.appendChild(zoomedImg);
