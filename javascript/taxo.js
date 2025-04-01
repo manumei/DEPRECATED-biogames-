@@ -102,10 +102,17 @@ document.addEventListener("DOMContentLoaded", () => {
             
                     cell.removeEventListener("click", handleClick);
 
-                    // 👇 Slight delay before showing the next organism
-                    setTimeout(() => {
-                        showRandomOrganism();
-                    }, 350); // milliseconds
+                    filledCount++;
+                    if (filledCount === 12) {
+                        setTimeout(() => {
+                            winPanel.classList.remove("hidden");
+                        }, 350);
+                    } else {
+                        // 👇 Move to next organism after a short delay
+                        setTimeout(() => {
+                            showRandomOrganism();
+                        }, 350);
+                    }
 
                     // Step 3 will go here
                 } else {
