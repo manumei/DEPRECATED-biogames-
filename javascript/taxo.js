@@ -1,22 +1,24 @@
 let organisms = [];
 let currentOrganism = null;
 
-fetch("assets/data/taxonomy.txt")
+fetch("assets/data/taxonomy.csv")
     .then(response => response.text())
     .then(text => {
-        organisms = text.trim().split("\n").map(line => {
-            const parts = line.split(", {");
-            const name = parts[0].trim();
-            const categoriesPart = parts[1].split("},")[0];
-            const categories = categoriesPart
-                .replace(/\}/g, "") // remove all closing braces
-                .split(",")
+        const lines = text.trim().split("\n");
+        lines.shift(); // Remove header line
+
+        organisms = lines.map(line => {
+            const [name, categoriesString, imagePath] = line.split(",");
+
+            const categories = categoriesString
+                .split(";")
                 .map(cat => cat.trim().toLowerCase());
-            const imagePath = line.split("},")[1]
-                .replace("{", "")
-                .replace("}", "")
-                .trim();
-            return { name, categories, imagePath };
+
+            return {
+                name: name.trim(),
+                categories,
+                imagePath: imagePath.trim()
+            };
         });
     });
 
@@ -28,6 +30,10 @@ function getRandomOrganism() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+    let filledCount = 0;
+    const winPanel = document.getElementById("win-panel");
+    const playAgainBtn = document.getElementById("play-again-btn");
+
     const startGameBtn = document.getElementById("start-game-btn");
     const zoomBtn = document.getElementById("zoom-btn");
     const skipBtn = document.getElementById("skip-button");
@@ -98,10 +104,17 @@ document.addEventListener("DOMContentLoaded", () => {
             
                     cell.removeEventListener("click", handleClick);
 
-                    // 👇 Slight delay before showing the next organism
-                    setTimeout(() => {
-                        showRandomOrganism();
-                    }, 350); // milliseconds
+                    filledCount++;
+                    if (filledCount === 12) {
+                        setTimeout(() => {
+                            winPanel.classList.remove("hidden");
+                        }, 350);
+                    } else {
+                        // 👇 Move to next organism after a short delay
+                        setTimeout(() => {
+                            showRandomOrganism();
+                        }, 350);
+                    }
 
                     // Step 3 will go here
                 } else {
@@ -142,17 +155,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const zoomedImg = document.createElement("img");
         zoomedImg.src = currentOrganism.imagePath;
         zoomedImg.alt = currentOrganism.name;
+        zoomedImg.classList.add("zoomed-image");
 
         zoomedImg.onload = () => {
-            const aspectRatio = zoomedImg.naturalWidth / zoomedImg.naturalHeight;
-        
-            if (aspectRatio >= 1) {
-                // Wider than tall — expand width
-                zoomedImg.classList.add("expand-width");
-            } else {
-                // Taller than wide — expand height
-                zoomedImg.classList.add("expand-height");
-            }
         };        
 
         overlay.appendChild(zoomedImg);
