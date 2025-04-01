@@ -24,7 +24,11 @@ Step 9a: Progress is saved (until daily reset), entering on the same day doesnt 
 
 Step 9b: Daily Refresh so that at 00:00 the game restarts for a new Bingo.
 
-Step ??: Expand Database, automatizarlo, thousands of images...
+Step ??: Expand Database, automatizarlo, thousands of images
+Examples of Taxo Expansion:
+
+- mollusca orders ("Gastropoda", "Bivalvia", "Cephalopoda")
+- more mammalia orders (eulipotyphla)
 
 ## Disease TicTacToe
 
