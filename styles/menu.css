@@ -50,7 +50,7 @@ main {
     text-align: left;
 }
 
-.difficulty-buttons {
+.timer-buttons {
     color: whitesmoke;
     display: flex;
     margin-top: -0.65rem;
