@@ -58,7 +58,7 @@ main {
     gap: 1rem;
 }
 
-.difficulty-btn {
+.timer-btn {
     color: whitesmoke;
     padding: 9px 13.5px;
     border: none;
@@ -67,7 +67,7 @@ main {
     background-color: rgba(124, 208, 215, 0.1);
 }
 
-.difficulty-btn:hover {
+.timer-btn:hover {
     background-color: rgba(110, 199, 207, 0.295);
 }
 
