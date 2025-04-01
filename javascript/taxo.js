@@ -1,22 +1,24 @@
 let organisms = [];
 let currentOrganism = null;
 
-fetch("assets/data/taxonomy.txt")
+fetch("assets/data/taxonomy.csv")
     .then(response => response.text())
     .then(text => {
-        organisms = text.trim().split("\n").map(line => {
-            const parts = line.split(", {");
-            const name = parts[0].trim();
-            const categoriesPart = parts[1].split("},")[0];
-            const categories = categoriesPart
-                .replace(/\}/g, "") // remove all closing braces
-                .split(",")
+        const lines = text.trim().split("\n");
+        lines.shift(); // Remove header line
+
+        organisms = lines.map(line => {
+            const [name, categoriesString, imagePath] = line.split(",");
+
+            const categories = categoriesString
+                .split(";")
                 .map(cat => cat.trim().toLowerCase());
-            const imagePath = line.split("},")[1]
-                .replace("{", "")
-                .replace("}", "")
-                .trim();
-            return { name, categories, imagePath };
+
+            return {
+                name: name.trim(),
+                categories,
+                imagePath: imagePath.trim()
+            };
         });
     });
 
