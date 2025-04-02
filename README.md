@@ -8,7 +8,7 @@ Given a Bingo-like grid of taxonomic classifications, match the organisms that a
 
 ### Symptoms Link
 
-Tic-Tac-Toe-style grid of matching symptons, guess diseases that share these symptoms
+Tic-Tac-Toe-style grid of matching animals with their traits, guess animals that share both row & column traits
 
 ### Bio top8 (coming soon!)
 
