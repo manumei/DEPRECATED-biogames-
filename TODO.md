@@ -54,6 +54,6 @@ _What to add:_ I want to record, in the same scale that we record game progress 
 - mollusca orders ("Gastropoda", "Bivalvia", "Cephalopoda")
 - more mammalia orders (eulipotyphla)
 
-## Disease TicTacToe
+## Symptoms Link
 
 ## Bio Top8
