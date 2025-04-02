@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Biogames: Test your biology skills on these fun varied games, inspired by Futbol-11.com">
+    <title>BioGames | Play and Learn</title>
+    <link rel="icon" href="icon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="preload" href="styles/normalize.css" as="style">
+    <link rel="stylesheet" type="text/css" href="styles/normalize.css">
+    <link rel="preload" href="styles/style.css" as="style">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="preload" href="styles/tictac.css" as="style">
+    <link rel="stylesheet" type="text/css" href="styles/tictac.css">
+    <link rel="preload" href="styles/menu.css" as="style">
+    <link rel="stylesheet" type="text/css" href="styles/menu.css">
+
+    <!-- Scripts -->
+    <script src="javascript/tictac.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <span class="green">BIO</span>GAMES
+            <img src="icon.png" alt="BioGames">
+        </a>
+    </header>
+
+    <main>
+        <div id="menu" class="menu-container">
+            <h2 class="menu-title"><span class="green">Animal</span> TicTacToe</h2>
+            
+            <div class="menu-content-container"> <!-- Image & text side by side -->
+                <img src="assets/img/symptoms_link-cover.png" alt="Taxo-Bingo Cover" class="menu-image">
+                
+                <div class="menu-content">
+                    <p class="menu-text">Enter Animals that match both the row and column trait combinations.
+                        <br><br>Fill the 3x3 Grid with the appropriate animal names, Write the animal name and press Enter to input it as an answer.
+                        <br><br>If one fits multiple cells, choose cell by clicking on it. Fill the whole grid to win!
+                    <button id="start-game-btn">Start Game</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>
