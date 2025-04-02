@@ -38,7 +38,7 @@ main {
     display: flex;
     align-items: center; /* Vertically aligns image and text */
     /* justify-content: center; */
-    gap: 0.7rem; /* Space between image and text */
+    gap: 0.5rem; /* Space between image and text */
     width: 100%; /* Ensures it spans full width of the panel */
     text-align: left;
 }
@@ -64,6 +64,7 @@ main {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-bottom: 1rem;
     background-color: rgba(124, 208, 215, 0.1);
 }
 
@@ -83,7 +84,7 @@ main {
 
 #start-game-btn {
     padding: 10px 20px;
-    margin-top: 1rem;
+    margin-top: 0rem;
     margin-left: 1rem;
     border: none;
     background-color: #23a328;
