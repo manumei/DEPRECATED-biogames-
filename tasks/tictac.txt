@@ -1,4 +1,4 @@
-_Game Description I'm giving you:_
+_Game Description I'm giving you to help me implement:_
 We are going to implement a new game called "Animal TicTacToe". The game consists of a 3x3 Grid with rows and columns having animal traits (for example "lays eggs", "warm blooded", "lives in tundra", "mammal", "insect", "apex predator", etc.).
 
 The player has to fill the cells with animals that match both its (i, j) row and column trait. For example, if i=2 is "lives in ocean" and j=1 is "carnivorous", some correct answers to put in the cell at the 2x1 position would be "great white shark", "orca", etc.

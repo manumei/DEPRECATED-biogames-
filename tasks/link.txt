@@ -1,4 +1,4 @@
-_Game Description I'm giving you_
+_Game Description I'm giving you to help me implement_
 We are going to implement a new game called "Symptoms Link". The game consists of guessing which disease matches all the symptoms being shown.
 
 The game has 5 panels where the symptoms will appear. At the start, only one symptom will be shown, and the user has to either guess a disease or press the "skip" button, if he guesses correctly, he wins! If he doesn't guess correctly, it does the same as the skip button, which is showing a second symptom
