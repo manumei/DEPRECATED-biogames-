@@ -56,4 +56,8 @@ _What to add:_ I want to record, in the same scale that we record game progress 
 
 ## Symptoms Link
 
+## Animal TicTacToe
+
+Potential Change: If the animal matches multiple of the non-disabled cells, give the user a choice between the available cells. Output a message below the input bar saying "{animal_name} matches several options, click on 1 to choose". And then style the available cells with a small blue circle fill, so the user decides to click one of them, fill the selected cell with the animal name and disable it.
+
 ## Bio Top8
