@@ -42,8 +42,6 @@ _What to add:_ I want to record, in the same scale that we record game progress 
 - mollusca orders ("Gastropoda", "Bivalvia", "Cephalopoda")
 - more mammalia orders (eulipotyphla)
 
-## Symptoms Link
-
 ## Animal TicTacToe
 
 Potential Change: If the animal matches multiple of the non-disabled cells, give the user a choice between the available cells. Output a message below the input bar saying "{animal_name} matches several options, click on 1 to choose". And then style the available cells with a small blue circle fill, so the user decides to click one of them, fill the selected cell with the animal name and disable it.
@@ -54,5 +52,11 @@ Que haga un script que tome esa lista, y replique todas las imagenes WEBP de ass
 las haga en assets/webp/tictac/ y que les ponga su nombre_comun en vez de su nombre_cientifico. Que use el hecho de que
 cada imagen se llama como su nombre_cientifico.webp, y que use la lista que creamos con {nombre_comun, nombre_scientifico} para renombrarlas
 Esto es para poder ejecutar el Step 4 de Animal TicTacToe, en Tasks/tic_tac.txt
+
+Add the timer repeating the Taxo Bingo logic
+
+## Symptoms Link
+
+Add the Input Prediction repeating the Animal TicTacToe logic
 
 ## Bio Top8
