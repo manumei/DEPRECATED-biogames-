@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const tx_OrdersArachnida = ["Araneae", "Scorpiones", "Acari"];
     const tx_OrdersInsecta = ["Coleoptera", "Lepidoptera", "Diptera", "Hymenoptera", "Hemiptera", "Dictyoptera"];
     const tx_OrdersReptilia = ["Squamata", "Testudines", "Crocodilia"];
-    const tx_OrdersMammalia = ["Primates", "Carnivora", "Rodentia", "Artiodactyla", "Perissodactyla", "Chiroptera", "Cetacea", "Diprotodontia", "Pilosa"]; // eulipotyphla, la de rabbits, etc.
+    const tx_OrdersMammalia = ["Primates", "Carnivora", "Rodentia", "Artiodactyla", "Perissodactyla", "Chiroptera", "Cetacea", "Marsupialia", "Pilosa"]; // eulipotyphla, la de rabbits, etc.
     const angiosperma = "Angiospermae";
 
     function generateBingoGrid() {
