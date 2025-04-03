@@ -2,18 +2,6 @@
 
 ## Taxo Bingo
 
-Step 1: Resources (Taxonomic Category Words, Images and Names of organisms + all their belonging taxonomic categories for each)
-
-Step 2: Bingo Grid 3x4 ✓
-
-Step 3: Organisms appear, clicking correct cell puts them there and makes them skip to next
-
-Step 4: Skip Button functionality
-
-Step 5: Flling all wins the game
-
-Step 5.5: CSV rework
-
 **Step 6 | Game Timer**
 _Context:_ The initial panel has 3 options for timers (No Timer, 90 seconds, 120 seconds). A timer must be selected (120 is chosen by default), this is what the HTML looks like for the timer buttons of the panel:
 
@@ -59,5 +47,12 @@ _What to add:_ I want to record, in the same scale that we record game progress 
 ## Animal TicTacToe
 
 Potential Change: If the animal matches multiple of the non-disabled cells, give the user a choice between the available cells. Output a message below the input bar saying "{animal_name} matches several options, click on 1 to choose". And then style the available cells with a small blue circle fill, so the user decides to click one of them, fill the selected cell with the animal name and disable it.
+
+Crea un script de python que haga una lista las imagenes de assets/webp/taxo/eukaryota/animalia/ y las pase todas a un notepad.
+Pasale a ChatCGT ese notepad y que te devuelva una lista de todas esas especies, pero un formato {nombre_comun, nombre_scientifico}
+Que haga un script que tome esa lista, y replique todas las imagenes WEBP de assets/webp/taxo/eukaryota/animalia/, pero que
+las haga en assets/webp/tictac/ y que les ponga su nombre_comun en vez de su nombre_cientifico. Que use el hecho de que
+cada imagen se llama como su nombre_cientifico.webp, y que use la lista que creamos con {nombre_comun, nombre_scientifico} para renombrarlas
+Esto es para poder ejecutar el Step 4 de Animal TicTacToe, en Tasks/tic_tac.txt
 
 ## Bio Top8
