@@ -53,10 +53,12 @@ las haga en assets/webp/tictac/ y que les ponga su nombre_comun en vez de su nom
 cada imagen se llama como su nombre_cientifico.webp, y que use la lista que creamos con {nombre_comun, nombre_scientifico} para renombrarlas
 Esto es para poder ejecutar el Step 4 de Animal TicTacToe, en Tasks/tic_tac.txt
 
-Add the timer repeating the Taxo Bingo logic
+Add the timer, repeating the Taxo Bingo logic. Takes you to the "You Lost" screen, same as the taxo logic.
+Add the database for game stats, repeating the Taxo Bingo logic (maybe ChatGPT help needed to replicate properly, but try without first)
 
 ## Symptoms Link
 
-Add the Input Prediction repeating the Animal TicTacToe logic
+Add the Input Prediction, repeating the Animal TicTacToe logic
+Add the database for game stats, repeating the Taxo Bingo logic (maybe ChatGPT help needed to replicate properly, but try without first)
 
 ## Bio Top8
