@@ -19,8 +19,15 @@ Set up a database of animal traits, listing alongside each of them, every animal
 Set up a 4x4 Grid, such that the First Column and the First Row have random non-repeated traits fetched from the Database. And the bottom right 3x3 is left empty
 
 
-**Step 3 | Inputs**
-Add an input bar below the grid where the user can write animal names and submit them. And work on the Positive (a) and Negative (b) cases for the input handling:
+**Step 3 | Inputs (has sub-steps 3A and 3B)**
+
+3A)
+Add an input bar below the grid where the user can write animal names and submit them. Input Bar has a "Submit" button to the right. Writing a name in the bar and pressing "Enter" key, or clicking the "submit" button will submit the written name. 
+
+To test this, we will add a temporary message that shows below the input bar after every submission, saying "you have submitted {animal_name}, nice testing!" (this message will be replaced by game logic in the next step).
+
+3B)
+And work on the Positive (a) and Negative (b) cases for the input handling:
 First, all cells are by default not disabled
 
 a) If the animal matches a single specific combo of row-column trait, fill the cell with the animal name in the matching cell and below the input bar write "{animal_name} has been added!". This cell is now disabled.
@@ -45,4 +52,3 @@ With name parts I mean like, in "Red Panda" the name parts are "Red" and "Panda"
 
 **Step 6 | Filling Grid wins the game**
 If all cells are filled, then the game is won, and pops up a "You Won!" panel on the screen for the user.
-
