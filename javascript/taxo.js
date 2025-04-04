@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const cell = document.createElement("div");
             cell.classList.add("grid-cell");
             cell.textContent = category;
-        
+
             // Clicking on a bingo cell
             cell.addEventListener("click", function handleClick() {
                 if (clickLocked) return;
@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     cell.classList.add("filled-cell");
                     cell.innerHTML = "";
-            
+
                     const label = document.createElement("div");
                     label.className = "filled-label";
                     label.textContent = category;
@@ -152,7 +152,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function endGame(won) {
         clearInterval(gameTimer);
-    
+
         // Disable all grid cells and skip
         document.querySelectorAll(".grid-cell").forEach(cell => cell.classList.add("disabled"));
         document.getElementById("skip-button").disabled = true;
@@ -167,7 +167,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const timerButtons = document.querySelectorAll(".timer-btn");
     let selectedTimerValue = 120; // default
-    
+
     timerButtons.forEach(button => {
         button.addEventListener("click", () => {
             timerButtons.forEach(btn => btn.classList.remove("selected"));
@@ -201,7 +201,7 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById("timer-display").classList.add("hidden");
         }
     });
-    
+
     zoomBtn.addEventListener("click", () => {
         if (!currentOrganism) return;
     
