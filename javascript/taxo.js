@@ -22,8 +22,6 @@ fetch("assets/data/taxonomy.csv")
         });
     });
 
-
-// Get a random organism from the list
 function getRandomOrganism() {
     if (organisms.length === 0) return null;
     return organisms[Math.floor(Math.random() * organisms.length)];
@@ -33,6 +31,10 @@ document.addEventListener("DOMContentLoaded", () => {
     let filledCount = 0;
     const winPanel = document.getElementById("win-panel");
     const playAgainBtn = document.getElementById("play-again-btn");
+
+    let gameTimer = null;
+    let timeRemaining = 0;
+    let hardMode = false; // for next step    
 
     const startGameBtn = document.getElementById("start-game-btn");
     const zoomBtn = document.getElementById("zoom-btn");
@@ -71,7 +73,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const shuffled = remainingCategories.sort(() => 0.5 - Math.random());
         const selectedCategories = shuffled.slice(0, 9); // Reduce to 9 to make space for "angiosperma"
-        const finalCategories = [domainCategory, kingdomCategory, angiosperma, ...selectedCategories];
+        // const finalCategories = [domainCategory, kingdomCategory, angiosperma, ...selectedCategories];
+        const finalCategories = Array(12).fill("Eukaryota");
         finalCategories.sort(() => 0.5 - Math.random());
 
         finalCategories.forEach(category => {
@@ -137,15 +140,60 @@ document.addEventListener("DOMContentLoaded", () => {
             organismImg.src = currentOrganism.imagePath;
             organismImg.alt = currentOrganism.name;
         }
-    }    
+    }
+
+    function endGame(won) {
+        clearInterval(gameTimer);
+    
+        if (won) {
+            // TODO: Handle win screen later
+        } else {
+            // Disable interaction
+            document.querySelectorAll(".grid-cell").forEach(cell => cell.classList.add("disabled"));
+            document.getElementById("skip-button").disabled = true;
+    
+            // Show loss popup
+            document.getElementById("loss-popup").classList.remove("hidden");
+        }
+    }
+
+    const timerButtons = document.querySelectorAll(".timer-btn");
+    let selectedTimerValue = 120; // default
+    
+    timerButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            timerButtons.forEach(btn => btn.classList.remove("selected"));
+            button.classList.add("selected");
+    
+            const timerAttr = button.getAttribute("timer");
+            selectedTimerValue = timerAttr === "None" ? null : parseInt(timerAttr);
+        });
+    });    
 
     startGameBtn.addEventListener("click", () => {
         menu.classList.add("hidden");
         gameContainer.classList.remove("hidden");
         generateBingoGrid();
-        showRandomOrganism();  // ← show one organism when game starts
+        showRandomOrganism();
+    
+        if (selectedTimerValue !== null) {
+            timeRemaining = selectedTimerValue;
+            document.getElementById("time-left").textContent = `${timeRemaining}s`;
+    
+            gameTimer = setInterval(() => {
+                timeRemaining--;
+                document.getElementById("time-left").textContent = `${timeRemaining}s`;
+    
+                if (timeRemaining <= 0) {
+                    clearInterval(gameTimer);
+                    endGame(false); // loss
+                }
+            }, 1000);
+        } else {
+            document.getElementById("timer-display").classList.add("hidden");
+        }
     });
-
+    
     zoomBtn.addEventListener("click", () => {
         if (!currentOrganism) return;
     
@@ -170,5 +218,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     skipBtn.addEventListener("click", () => {
         showRandomOrganism();
+    });
+
+    document.getElementById("close-loss-popup").addEventListener("click", () => {
+        document.getElementById("loss-popup").classList.add("hidden");
     });
 });

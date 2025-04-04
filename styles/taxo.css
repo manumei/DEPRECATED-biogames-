@@ -91,12 +91,12 @@
 /* Organism Name & Image and Stuff */
 
 #organism-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    justify-content: center;
-    position: relative;
+    justify-items: center;
     margin-bottom: 0.5rem;
-    min-height: 100px; /* Lock vertical height */
+    column-gap: 1rem; /* 👈 Increase this value for more spacing */
 }
 
 #organism-info {
@@ -104,7 +104,16 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: auto;
+    grid-column: 2; /* Force it into center column */
+    width: 10rem;
+}
+
+#organism-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    grid-column: 3;
 }
 
 #organism-text {
@@ -118,9 +127,6 @@
 }
 
 #skip-button {
-    position: absolute;
-    left: 50%;
-    transform: translateX(calc(100% + 3rem));
     padding: 8px 15px;
     font-size: 16px;
     background-color: #ff9e2e;
@@ -131,8 +137,10 @@
     cursor: pointer;
 }
 
-#organism-img {
-    object-fit: cover;
+#timer-display {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ffdd57;
 }
 
 #organism-img {
@@ -141,11 +149,6 @@
     object-fit: cover;
 }
 
-#organism-text {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 0;
-}
 
 #organism-image-wrapper {
     position: relative;
@@ -206,28 +209,56 @@
     border-radius: 8px;
 }
 
-#win-panel {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 16rem;
-    background: rgba(0, 0, 0, 0.6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
 
-.win-content {
-    background: #ffffff;
-    padding: 2rem 3rem;
+/* LO DE ACA ABAJO ES DE "YOU LOST" & "YOU WON" PANELS */
+
+#loss-popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    color: black;
+    padding: 2rem;
     border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
     text-align: center;
-    color: #333;
-    box-shadow: 0 0 25px limegreen;
-    border: 2px solid #00ff55;
+    width: 22rem;
 }
 
-#win-panel.hidden {
-    display: none;
+.loss-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.close-button {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.75rem;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: red;
+    cursor: pointer;
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: #ff4c4c;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.back-button:hover {
+    background-color: #e84343;
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.5;
 }
