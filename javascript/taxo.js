@@ -1,6 +1,8 @@
 let organisms = [];
 let currentOrganism = null;
+let selectedTimerValue = 120; // default
 let clickLocked = false;
+let hardModeEnabled = false;
 
 fetch("assets/data/taxonomy.csv")
     .then(response => response.text())
@@ -37,14 +39,15 @@ function checkWinCondition() {
 
 document.addEventListener("DOMContentLoaded", () => {
     let filledCount = 0;
-
     let gameTimer = null;
     let timeRemaining = 0;
     let hardMode = false; // for next step    
 
+    const timerButtons = document.querySelectorAll(".timer-btn");
     const startGameBtn = document.getElementById("start-game-btn");
     const zoomBtn = document.getElementById("zoom-btn");
     const skipBtn = document.getElementById("skip-button");
+    const hardModeBtn = document.getElementById("hard-mode-btn");
 
     const organismImg = document.getElementById("organism-img");
     const organismText = document.getElementById("organism-text");
@@ -144,9 +147,10 @@ document.addEventListener("DOMContentLoaded", () => {
     function showRandomOrganism() {
         currentOrganism = getRandomOrganism();
         if (currentOrganism) {
-            organismText.textContent = currentOrganism.name;
             organismImg.src = currentOrganism.imagePath;
             organismImg.alt = currentOrganism.name;
+    
+            organismText.textContent = hardModeEnabled ? "" : currentOrganism.name;
         }
     }
 
@@ -164,9 +168,6 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById("loss-popup").classList.remove("hidden");
         }
     }    
-
-    const timerButtons = document.querySelectorAll(".timer-btn");
-    let selectedTimerValue = 120; // default
 
     timerButtons.forEach(button => {
         button.addEventListener("click", () => {
@@ -226,6 +227,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     skipBtn.addEventListener("click", () => {
         showRandomOrganism();
+    });
+
+    hardModeBtn.addEventListener("click", () => {
+        hardModeEnabled = !hardModeEnabled;
+    
+        if (hardModeEnabled) {
+            hardModeBtn.textContent = "Hard Mode ✔";
+            hardModeBtn.classList.add("enabled");
+        } else {
+            hardModeBtn.textContent = "Hard Mode ✖";
+            hardModeBtn.classList.remove("enabled");
+        }
     });
 
     document.getElementById("close-loss-popup").addEventListener("click", () => {

@@ -66,6 +66,7 @@ main {
     cursor: pointer;
     margin-bottom: 1rem;
     background-color: rgba(124, 208, 215, 0.1);
+    transition: background-color 0.2s ease;
 }
 
 .timer-btn:hover {
@@ -84,13 +85,12 @@ main {
 
 #start-game-btn {
     padding: 10px 20px;
-    margin-top: 0rem;
-    margin-left: 1rem;
     border: none;
     background-color: #23a328;
     color: white;
     cursor: pointer;
     border-radius: 5px;
+    transition: background-color 0.2s ease;
 }
 
 #start-game-btn:hover {
@@ -110,4 +110,34 @@ main {
 
 #hints-btn:hover {
     background-color: #f0ad4e9e;
+}
+
+/* Hard Button */
+.start-row {
+    display: flex;
+    margin-left: 1rem;
+    gap: 1rem;
+}
+
+#hard-mode-btn {
+    padding: 10px 20px;
+    border: none;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #e44b4b; /* light red default */
+    transition: background-color 0.2s ease;
+}
+
+#hard-mode-btn:hover {
+    background-color: rgba(226, 47, 47, 0.8)/* brighter red on hover */
+}
+
+#hard-mode-btn.enabled {
+    background-color: #6880eb; /* light blue when enabled */
+    transition: background-color 0.2s ease;
+}
+
+#hard-mode-btn.enabled:hover {
+    background-color: #4d67db; /* brighter blue on hover */
 }
