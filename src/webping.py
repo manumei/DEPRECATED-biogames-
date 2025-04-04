@@ -10,6 +10,10 @@ def webp_transformer(webp_root, img_root):
     # === Traverse folder structure ===
     for dirpath, dirnames, filenames in os.walk(img_root):
         if not dirnames and filenames:
+            # Print the leaf folder name
+            leaf_folder_name = os.path.basename(dirpath)
+            print(f"📂 Leaf folder: {leaf_folder_name}")
+
             # Get taxonomy path: folders after 'taxo/'
             parts = dirpath.split(os.sep)
             try:
@@ -53,14 +57,14 @@ def webp_transformer(webp_root, img_root):
     # === Preview some results ===
     species_count = len(organism_dict)
     print("\n📖 Sample entries:")
-    for name, info in list(organism_dict.items()):
+    for name, info in list(organism_dict.items())[:5]:
         print(f"{name}, {{{', '.join(info['taxonomy'])}}}, {{{info['webp_path']}}}")
 
     print(Fore.BLUE + Style.BRIGHT + f"\n🧬 Total species: {species_count}" + Style.RESET_ALL)
 
     if exception_counter > 0:
         print(Fore.RED + Style.BRIGHT + f"❌ Failed to convert {exception_counter} images" + Style.RESET_ALL)
-    else :
+    else:
         print(Fore.GREEN + Style.BRIGHT + "✅ All images converted successfully" + Style.RESET_ALL)
 
 # Clearing Function
@@ -97,7 +101,7 @@ webp_root_top8 = os.path.join(root_dir, "assets", "webp", "top8")
 
 # Taxo
 # webp_transformer(webp_root_taxo, img_root_taxo)
-# clear_webps(webp_root_taxo)
+clear_webps(webp_root_taxo)
 
 # Symptoms Link
 # webp_transformer(webp_root_symptoms_link, img_root_symptoms_link)
