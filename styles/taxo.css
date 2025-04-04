@@ -211,13 +211,12 @@
 
 
 /* LO DE ACA ABAJO ES DE "YOU LOST" & "YOU WON" PANELS */
-
-#loss-popup {
+.over-popup {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: white;
+    background: rgb(207, 200, 200);
     color: black;
     padding: 2rem;
     border-radius: 12px;
@@ -227,7 +226,7 @@
     width: 22rem;
 }
 
-.loss-title {
+.over-title {
     font-size: 2rem;
     margin-bottom: 1rem;
 }
@@ -247,15 +246,15 @@
     display: inline-block;
     margin-top: 1.5rem;
     padding: 0.6rem 1.2rem;
-    background-color: #ff4c4c;
-    color: white;
+    background-color: #6574fd;
+    color: whitesmoke;
     text-decoration: none;
     border-radius: 6px;
     font-weight: bold;
 }
 
 .back-button:hover {
-    background-color: #e84343;
+    background-color: #4755d4;
 }
 
 .disabled {

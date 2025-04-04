@@ -27,6 +27,13 @@ function getRandomOrganism() {
     return organisms[Math.floor(Math.random() * organisms.length)];
 }
 
+function checkWinCondition() {
+    const filledCells = document.querySelectorAll(".grid-cell.filled-cell");
+    if (filledCells.length === 12) {
+        endGame(true);
+    }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     let filledCount = 0;
     const winPanel = document.getElementById("win-panel");
@@ -104,16 +111,15 @@ document.addEventListener("DOMContentLoaded", () => {
                     img.src = currentOrganism.imagePath;
                     img.alt = currentOrganism.name;
                     cell.appendChild(img);
-            
+
                     cell.removeEventListener("click", handleClick);
 
                     filledCount++;
                     if (filledCount === 12) {
                         setTimeout(() => {
-                            winPanel.classList.remove("hidden");
+                            endGame(true); // ✅ use shared game-ending logic
                         }, 350);
                     } else {
-                        // 👇 Move to next organism after a short delay
                         setTimeout(() => {
                             showRandomOrganism();
                         }, 350);
@@ -145,17 +151,17 @@ document.addEventListener("DOMContentLoaded", () => {
     function endGame(won) {
         clearInterval(gameTimer);
     
-        if (won) {
-            // TODO: Handle win screen later
-        } else {
-            // Disable interaction
-            document.querySelectorAll(".grid-cell").forEach(cell => cell.classList.add("disabled"));
-            document.getElementById("skip-button").disabled = true;
+        // Disable all grid cells and skip
+        document.querySelectorAll(".grid-cell").forEach(cell => cell.classList.add("disabled"));
+        document.getElementById("skip-button").disabled = true;
     
-            // Show loss popup
+        if (won) {
+            console.log("🎉 You won! 🎉");
+            document.getElementById("win-popup").classList.remove("hidden");
+        } else {
             document.getElementById("loss-popup").classList.remove("hidden");
         }
-    }
+    }    
 
     const timerButtons = document.querySelectorAll(".timer-btn");
     let selectedTimerValue = 120; // default
@@ -223,4 +229,8 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("close-loss-popup").addEventListener("click", () => {
         document.getElementById("loss-popup").classList.add("hidden");
     });
+
+    document.getElementById("close-win-popup").addEventListener("click", () => {
+        document.getElementById("win-popup").classList.add("hidden");
+    });    
 });
