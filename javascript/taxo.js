@@ -1,5 +1,6 @@
 let organisms = [];
 let currentOrganism = null;
+let clickLocked = false;
 
 fetch("assets/data/taxonomy.csv")
     .then(response => response.text())
@@ -36,8 +37,6 @@ function checkWinCondition() {
 
 document.addEventListener("DOMContentLoaded", () => {
     let filledCount = 0;
-    const winPanel = document.getElementById("win-panel");
-    const playAgainBtn = document.getElementById("play-again-btn");
 
     let gameTimer = null;
     let timeRemaining = 0;
@@ -91,13 +90,16 @@ document.addEventListener("DOMContentLoaded", () => {
         
             // Clicking on a bingo cell
             cell.addEventListener("click", function handleClick() {
+                if (clickLocked) return;
                 const catName = category.trim().toLowerCase();
-
-                // 🔍 Debug logs
+            
+                // Debug
                 console.log("🧪 Clicked category:", catName);
                 console.log("✅ Valid categories for", currentOrganism.name, "→", currentOrganism.categories);
 
                 if (currentOrganism && currentOrganism.categories.includes(catName)) {
+                    clickLocked = true;
+
                     cell.classList.add("filled-cell");
                     cell.innerHTML = "";
             
@@ -117,11 +119,12 @@ document.addEventListener("DOMContentLoaded", () => {
                     filledCount++;
                     if (filledCount === 12) {
                         setTimeout(() => {
-                            endGame(true); // ✅ use shared game-ending logic
+                            endGame(true);
                         }, 350);
                     } else {
                         setTimeout(() => {
                             showRandomOrganism();
+                            clickLocked = false;
                         }, 350);
                     }
 
@@ -133,8 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         cell.classList.remove("shake-wrong");
                     }, 700); // duration of the animation
                 }
-            });            
-    
+            });
             bingoGrid.appendChild(cell);
         });
     }
