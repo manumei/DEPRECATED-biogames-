@@ -161,6 +161,6 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background: transparent; /* Invisible but blocks interaction */
+    background: rgba(0, 0, 0, 0.3); /* subtle darkening */
     z-index: 999; /* just below popup */
 }
