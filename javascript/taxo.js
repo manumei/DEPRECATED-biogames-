@@ -1,4 +1,5 @@
 let organisms = [];
+let availableOrganisms = [];
 let currentOrganism = null;
 let selectedTimerValue = 120; // default
 let clickLocked = false;
@@ -26,8 +27,11 @@ fetch("assets/data/taxonomy.csv")
     });
 
 function getRandomOrganism() {
-    if (organisms.length === 0) return null;
-    return organisms[Math.floor(Math.random() * organisms.length)];
+    if (availableOrganisms.length === 0) {
+        console.log("🚨0 available organisms 🚨");
+        return null;
+    }
+    return availableOrganisms[Math.floor(Math.random() * availableOrganisms.length)];
 }
 
 function checkWinCondition() {
@@ -123,6 +127,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     cell.removeEventListener("click", handleClick);
 
+                    // sacalo de los availables si ya fue correctly placed
+                    availableOrganisms = availableOrganisms.filter(org => org !== currentOrganism);
+
                     filledCount++;
                     if (filledCount === 12) {
                         setTimeout(() => {
@@ -192,6 +199,7 @@ document.addEventListener("DOMContentLoaded", () => {
     startGameBtn.addEventListener("click", () => {
         menu.classList.add("hidden");
         gameContainer.classList.remove("hidden");
+        availableOrganisms = [...organisms];
         generateBingoGrid();
         showRandomOrganism();
     
