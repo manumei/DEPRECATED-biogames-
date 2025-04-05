@@ -61,3 +61,18 @@ main {
     margin-left: 5px;
     font-style: italic;
 }
+
+@media (max-width: 600px) {
+    .panels-container {
+      grid-template-columns: 1fr; /* 1 column instead of 2 */
+      column-gap: 0; /* Remove horizontal spacing */
+      row-gap: 2rem; /* Add some breathing space between rows */
+    }
+
+    .panel,
+    .panel-soon {
+      width: 100%; /* Full width within the container */
+      padding: 3rem; /* Optional: slightly less padding on smaller screens */
+      font-size: 1.4rem; /* Optional: slightly smaller text */
+    }
+}
