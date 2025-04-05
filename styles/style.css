@@ -7,7 +7,7 @@
 body {
     color: whitesmoke;
     background-color: rgb(6, 23, 48);
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Figtree', sans-serif;
     font-size: 62.5%;
 }
 
@@ -170,4 +170,16 @@ header {
     height: 100%;
     background: rgba(0, 0, 0, 0.3); /* subtle darkening */
     z-index: 999; /* just below popup */
+}
+
+/** Responsive Design for Mobile Devices **/
+
+@media (max-width: 768px) {
+    .logo {
+        font-size: 2.5rem;
+    }
+
+    .logo img {
+        width: 2.5rem;
+    }
 }

@@ -20,18 +20,18 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: url("../assets/img/plant-border.png") center/cover no-repeat, rgba(0, 128, 0, 0.7);
+    background: url("../assets/img/plant-border.png") center/cover no-repeat, #004D00;
     border-radius: 1.8rem;
     font-size: 1.3rem;
-    font-weight: bold;
+    font-weight: 600;
     text-decoration: none;
-    color: black;
+    color: #FFFFFF;
     cursor: pointer;
     transition: background 0.3s, transform 0.2s, background-size 0.3s;
 }
 
 .panel-soon {
-    background: url("../assets/img/plant-border.png") center/cover no-repeat, rgba(51, 112, 51, 0.589);
+    background: url("../assets/img/plant-border.png") center/cover no-repeat, #004D00;
 }
 
 .panel:hover {
