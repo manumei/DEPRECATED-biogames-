@@ -86,8 +86,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const shuffled = remainingCategories.sort(() => 0.5 - Math.random());
         const selectedCategories = shuffled.slice(0, 9); // Reduce to 9 to make space for "angiosperma"
-        // const finalCategories = [domainCategory, kingdomCategory, angiosperma, ...selectedCategories];
-        const finalCategories = Array(12).fill("Eukaryota");
+        const finalCategories = [domainCategory, kingdomCategory, angiosperma, ...selectedCategories];
+        // const finalCategories = Array(12).fill("Eukaryota"); //UNCOMMENT ME TO PLAY WITH FULL EUKARYOTA FOR TESTING
         finalCategories.sort(() => 0.5 - Math.random());
 
         finalCategories.forEach(category => {
