@@ -276,5 +276,38 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.getElementById("close-win-popup").addEventListener("click", () => {
         document.getElementById("win-popup").classList.add("hidden");
-    });    
+    });
+
+    // KEYBINDS
+    document.addEventListener("keydown", (e) => {
+        const giveupOpen = !giveUpPopup.classList.contains("hidden");
+        const lossOpen = !document.getElementById("loss-popup").classList.contains("hidden");
+        const winOpen = !document.getElementById("win-popup").classList.contains("hidden");
+    
+        // Space → Skip organism
+        if (e.code === "Space" && !giveupOpen && !lossOpen && !winOpen) {
+            e.preventDefault(); // prevent page scroll
+            const skipBtn = document.getElementById("skip-button");
+            if (!skipBtn.disabled) {
+                skipBtn.click();
+            }
+        }
+    
+        // Escape → Close Give Up confirmation popup
+        if (e.code === "Escape" && giveupOpen) {
+            e.preventDefault();
+            cancelGiveUpBtn.click(); // same as clicking "No"
+        }
+    
+        // Escape → Close win/loss popup (optional)
+        if (e.code === "Escape" && lossOpen) {
+            e.preventDefault();
+            document.getElementById("close-loss-popup").click();
+        }
+        if (e.code === "Escape" && winOpen) {
+            e.preventDefault();
+            document.getElementById("close-win-popup").click();
+        }
+    });
+    
 });
