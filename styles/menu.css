@@ -141,10 +141,6 @@
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .menu-container {
-        padding: 1rem;
-    }
-
     .menu-content-container {
         grid-template-columns: 1fr; /* Stack items on smaller screens */
     }
