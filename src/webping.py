@@ -101,7 +101,7 @@ webp_root_top8 = os.path.join(root_dir, "assets", "webp", "top8")
 
 # Taxo
 # webp_transformer(webp_root_taxo, img_root_taxo)
-clear_webps(webp_root_taxo)
+# clear_webps(webp_root_taxo) 
 
 # Symptoms Link
 # webp_transformer(webp_root_symptoms_link, img_root_symptoms_link)
