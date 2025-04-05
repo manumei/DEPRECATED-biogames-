@@ -12,7 +12,7 @@
 
 #bingo-grid {
     margin-top: 0.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -260,4 +260,21 @@
 .disabled {
     pointer-events: none;
     opacity: 0.5;
+}
+
+#give-up-btn {
+    margin: 0;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 2px solid #105e00;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: transparent;
+    transition: background-color 0.2s ease;
+}
+
+#give-up-btn:hover {
+    background-color: #335833a6;
 }

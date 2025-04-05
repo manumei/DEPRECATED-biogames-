@@ -48,6 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const zoomBtn = document.getElementById("zoom-btn");
     const skipBtn = document.getElementById("skip-button");
     const hardModeBtn = document.getElementById("hard-mode-btn");
+    const giveUpBtn = document.getElementById("give-up-btn");
 
     const organismImg = document.getElementById("organism-img");
     const organismText = document.getElementById("organism-text");
@@ -160,6 +161,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Disable all grid cells and skip
         document.querySelectorAll(".grid-cell").forEach(cell => cell.classList.add("disabled"));
         document.getElementById("skip-button").disabled = true;
+        document.getElementById("give-up-btn").disabled = true;
     
         if (won) {
             console.log("🎉 You won! 🎉");
@@ -239,6 +241,10 @@ document.addEventListener("DOMContentLoaded", () => {
             hardModeBtn.textContent = "Hard Mode ✖";
             hardModeBtn.classList.remove("enabled");
         }
+    });
+
+    giveUpBtn.addEventListener("click", () => {
+        endGame(false); // treat like a loss
     });
 
     document.getElementById("close-loss-popup").addEventListener("click", () => {
