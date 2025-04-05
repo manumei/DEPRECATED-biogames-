@@ -5,6 +5,7 @@ let selectedTimerValue = 120; // default
 let clickLocked = false;
 let hardModeEnabled = false;
 
+// fetch("assets/data/friaxonomy.csv")
 fetch("assets/data/taxonomy.csv")
     .then(response => response.text())
     .then(text => {
