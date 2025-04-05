@@ -31,6 +31,8 @@ With the same grid cells staying the same for the entire day of course, as well 
 
 If the current-day game has already been won, leads directly to the "you won" screen, and same if it has already been lost for the "you lost" screen. At 00:00, the game resets and you can play a new game. 
 
+So basically, this would turn it into a sort of "Daily Challenge", where each day you get a new shuffle of 12 taxonomic categories as bingo cells, and progress is saved during the day
+
 _Question before implementing:_ How should we save the progress without having game accounts? Should we save it to the IP? To the current google profile? To the device itself? What is the easiest and most simple way? I know of similar games that don't have accounts, but they are able to store this data when you open the game on the same google profile (yes, it can be bypassed by using incognito mode, but it's the best they can do).
 
 
@@ -38,3 +40,9 @@ _Question before implementing:_ How should we save the progress without having g
 _Context:_ Game doesn't record anything about wins or losses, there are no stats for you to see how much you have won and such.
 
 _What to add:_ I want to record, in the same scale that we record game progress in Step 9 (be it local profile, device, etc.) the statistics of each player. How many times they have won and how many times they have lost. And show a graph of both this results in both the "You Won" and "You Lost" screens.
+
+
+**Step 11 | Winning Streaks**
+_Context:_ Finally, as the last part of this daily-challenge with user win database, I want to add some fun incentive to keep winning and show off
+
+_What to add:_ 
