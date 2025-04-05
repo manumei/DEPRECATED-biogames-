@@ -4,16 +4,54 @@
     padding: 0;
 }
 
+html {
+    font-size: 62.5%;
+}
+
 body {
     color: whitesmoke;
     background-color: rgb(6, 23, 48);
     font-family: 'Figtree', sans-serif;
-    font-size: 62.5%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Figtree', sans-serif;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 4.2rem;
+}
+
+h2 {
+    font-size: 3.6rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h4 {
+    font-size: 2.4rem;
+}
+
+h5 {
+    font-size: 2rem;
+}
+
+p, li, a, button {
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+button:hover {
+    cursor: pointer;
+    opacity: 0.8;
 }
 
 header {
     display: flex;
-    padding: 0.4rem;
+    padding: 1.4rem;
     justify-content: center; /* Center horizontally */
     align-items: center;
     background-color: rgb(8, 28, 58);
@@ -24,13 +62,13 @@ header {
     display: flex;
     align-items: center; /* Aligns text and image on the same line */
     text-decoration: none;
-    font-size: 3rem;
+    font-size: 4.2rem;
     font-weight: bold;
     color: whitesmoke;
 }
 
 .logo img {
-    width: 3rem; /* Adjust size as needed */
+    width: 4.2rem; /* Adjust size as needed */
     height: auto;
     margin-left: 0.4rem;
 }
@@ -60,11 +98,10 @@ header {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     z-index: 1000;
     text-align: center;
-    width: 22rem;
+    width: 40rem;
 }
 
 .over-title {
-    font-size: 2rem;
     margin-bottom: 1rem;
 }
 
@@ -74,7 +111,6 @@ header {
     right: 0.75rem;
     background: none;
     border: none;
-    font-size: 1.2rem;
     color: red;
     cursor: pointer;
 }
@@ -105,7 +141,6 @@ header {
     margin-bottom: 1rem;
     border: 2px solid #105e00;
     border-radius: 6px;
-    font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
     background-color: transparent;
@@ -131,14 +166,13 @@ header {
 }
 
 .giveup-sure {
-    font-size: 1.1rem;
     margin-bottom: 0.5rem;
 }
 
 .giveup-buttons {
     display: flex;
     justify-content: center;
-    gap: 1.2rem;
+    gap: 1.4rem;
     margin-top: 1rem;
 }
 
@@ -149,7 +183,6 @@ header {
     border-radius: 6px;
     cursor: pointer;
     transition: background-color 0.2s ease;
-    font-size: 1rem;
 }
 
 .giveup-opt-btn {

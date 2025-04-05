@@ -12,8 +12,8 @@
 /* Panel button styles */
 .panel,
 .panel-soon {
-    width: 20rem;
-    height: 8rem;
+    width: 36rem;
+    height: 14rem;
     padding: 4rem;
     text-align: center;
     display: flex;
@@ -22,7 +22,7 @@
     justify-content: center;
     background: url("../assets/img/plant-border.png") center/cover no-repeat, #004D00;
     border-radius: 1.8rem;
-    font-size: 1.3rem;
+    font-size: 2.4rem;
     font-weight: 600;
     text-decoration: none;
     color: #FFFFFF;
@@ -63,6 +63,7 @@
     .panel,
     .panel-soon {
         width: 100%;
-        height: 4rem;
+        height: 12rem;
+        font-size: 2rem;
     }
 }

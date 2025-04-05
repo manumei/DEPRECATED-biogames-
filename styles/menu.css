@@ -1,13 +1,13 @@
 .menu-container {
-    width: min(90%, 40rem);
+    width: min(90%, 80rem);
     height: auto;
     margin: auto;
-    margin-top: 2rem;
-    padding: 1rem;
-    border-radius: 10px;
+    margin-top: 4rem;
+    padding: 2rem;
+    border-radius: 2rem;
     background: rgb(10, 33, 68);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    border: 0.5px solid rgb(94, 255, 0);
+    border: 0.05rem solid rgb(94, 255, 0);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,7 +15,7 @@
 }
 
 .menu-title {
-    font-size: 28px;
+    font-size: 3.2rem;
     font-weight: bold;
     margin: 0;
     color: whitesmoke;
@@ -26,7 +26,7 @@
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     align-items: start;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .menu-image {
@@ -46,7 +46,7 @@
 
 .menu-text {
     color: whitesmoke;
-    line-height: 1.25;
+    line-height: 1.5;
 }
 
 .timer-buttons {
@@ -57,7 +57,6 @@
     gap: .5rem;
 }
 
-
 .timer-btn {
     color: whitesmoke;
     padding: 9px 13.5px;
@@ -66,6 +65,11 @@
     cursor: pointer;
     background-color: rgba(124, 208, 215, 0.1);
     transition: background-color 0.2s ease;
+}
+
+.timer-btns {
+    display: flex;
+    gap: 1rem;
 }
 
 .timer-btn:hover {
@@ -95,11 +99,11 @@
     color: black;
     cursor: pointer;
     border-radius: 5px;
-    transition: background-color 0.2s ease;
+    transition: 0.2s ease;
 }
 
 #start-game-btn:hover {
-    background-color: #083a0a;
+    opacity: 0.8;
 }
 
 #hard-mode-btn {
@@ -146,6 +150,6 @@
     }
 
     .menu-content {
-        gap: 1rem;
+        gap: 2rem;
     }
 }
