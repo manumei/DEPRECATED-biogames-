@@ -71,8 +71,8 @@ main {
 
     .panel,
     .panel-soon {
-      width: 100%; /* Full width within the container */
-      padding: 3rem; /* Optional: slightly less padding on smaller screens */
-      font-size: 1.4rem; /* Optional: slightly smaller text */
+        width: 100%; 
+        padding: 3rem;
+        font-size: 1.4rem; 
     }
 }
