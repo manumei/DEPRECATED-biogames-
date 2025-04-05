@@ -101,8 +101,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 const catName = category.trim().toLowerCase();
             
                 // Debug
-                console.log("🧪 Clicked category:", catName);
-                console.log("✅ Valid categories for", currentOrganism.name, "→", currentOrganism.categories);
+                // console.log("🧪 Clicked category:", catName);
+                // console.log("✅ Valid categories for", currentOrganism.name, "→", currentOrganism.categories);
 
                 if (currentOrganism && currentOrganism.categories.includes(catName)) {
                     clickLocked = true;
