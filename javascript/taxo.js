@@ -49,6 +49,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const skipBtn = document.getElementById("skip-button");
     const hardModeBtn = document.getElementById("hard-mode-btn");
     const giveUpBtn = document.getElementById("give-up-btn");
+    const giveUpPopup = document.getElementById("giveup-popup");
+    const confirmGiveUpBtn = document.getElementById("confirm-giveup-btn");
+    const cancelGiveUpBtn = document.getElementById("cancel-giveup-btn");
 
     const organismImg = document.getElementById("organism-img");
     const organismText = document.getElementById("organism-text");
@@ -169,7 +172,12 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             document.getElementById("loss-popup").classList.remove("hidden");
         }
-    }    
+    }
+
+    const overlayBlocker = document.createElement("div");
+    overlayBlocker.id = "overlay-blocker";
+    overlayBlocker.classList.add("hidden");
+    document.body.appendChild(overlayBlocker);
 
     timerButtons.forEach(button => {
         button.addEventListener("click", () => {
@@ -242,9 +250,24 @@ document.addEventListener("DOMContentLoaded", () => {
             hardModeBtn.classList.remove("enabled");
         }
     });
-
+    
+    // Show blocker + popup
     giveUpBtn.addEventListener("click", () => {
-        endGame(false); // treat like a loss
+        giveUpPopup.classList.remove("hidden");
+        overlayBlocker.classList.remove("hidden");
+    });
+
+    // Handle YES
+    confirmGiveUpBtn.addEventListener("click", () => {
+        giveUpPopup.classList.add("hidden");
+        overlayBlocker.classList.add("hidden");
+        endGame(false);
+    });
+
+    // Handle NO
+    cancelGiveUpBtn.addEventListener("click", () => {
+        giveUpPopup.classList.add("hidden");
+        overlayBlocker.classList.add("hidden");
     });
 
     document.getElementById("close-loss-popup").addEventListener("click", () => {
