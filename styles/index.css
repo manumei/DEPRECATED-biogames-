@@ -14,7 +14,7 @@ main {
 /* Panel button styles */
 .panel {
     display: flex;
-    width: 16rem;
+    width: 18rem;
     padding: 4rem;
     margin: 1.5rem 0;
     text-align: center;
@@ -30,15 +30,8 @@ main {
     transition: background 0.3s, transform 0.2s, background-size 0.3s;
 }
 
-/* Hover effect */
-.panel:hover {
-    background-color: rgb(72, 138, 28);
-    transform: scale(1.05);
-    background-size: 110%;
-}
-
 .panel-soon {
-    width: 16rem;
+    width: 18rem;
     padding: 4rem;
     margin: 1.5rem 0;
     text-align: center;
@@ -50,6 +43,13 @@ main {
     color: rgb(0, 0, 0);
     cursor: pointer;
     transition: background 0.3s, transform 0.2s, background-size 0.3s;
+}
+
+/* Hover effect */
+.panel:hover {
+    background-color: rgb(72, 138, 28);
+    transform: scale(1.025);
+    background-size: 116%;
 }
 
 .panel-soon:hover {
