@@ -17,7 +17,7 @@ header {
     justify-content: center; /* Center horizontally */
     align-items: center;
     background-color: rgb(8, 28, 58);
-    border-bottom: 0.4px solid rgb(247, 207, 79); /* Purple horizontal line */
+    border-bottom: 0.04rem solid rgb(247, 207, 79); /* Purple horizontal line */
 }
 
 .logo {
