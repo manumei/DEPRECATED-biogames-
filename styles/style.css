@@ -32,9 +32,135 @@ header {
     opacity: 0.8;
 }
 
-
 .green {
     background: linear-gradient(to bottom, rgb(177, 255, 6), rgb(34, 129, 1)); /* Light green to dark green */
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+
+/* You Won, You Lost, Give Up */
+.over-popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(207, 200, 200);
+    color: black;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    text-align: center;
+    width: 22rem;
+}
+
+.over-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.close-button {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.75rem;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: red;
+    cursor: pointer;
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: #6574fd;
+    color: whitesmoke;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.back-button:hover {
+    background-color: #4755d4;
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+#give-up-btn {
+    margin: 0;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 2px solid #105e00;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: transparent;
+    transition: background-color 0.2s ease;
+}
+
+#give-up-btn:hover {
+    background-color: #335833a6;
+}
+
+#giveup-popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    color: black;
+    padding: 1.2rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    z-index: 1000;
+    text-align: center;
+    width: 20rem; /* medium width */
+    min-height: 7rem; /* short height */
+}
+
+.giveup-sure {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.giveup-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-top: 1rem;
+}
+
+.giveup-buttons button {
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-size: 1rem;
+}
+
+#confirm-giveup-btn {
+    background-color: #ff4c4c;
+    color: white;
+}
+
+#confirm-giveup-btn:hover {
+    background-color: #e84343;
+}
+
+#cancel-giveup-btn {
+    background-color: #ddd;
+    color: black;
+}
+
+#cancel-giveup-btn:hover {
+    background-color: #bbb;
 }
