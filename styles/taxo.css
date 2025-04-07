@@ -40,8 +40,9 @@
 /* Bingo Grid */
 #bingo-grid {
     display: grid;
+    align-items: center;
+    justify-items: center;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
     gap: 1rem;
 }
 
@@ -53,7 +54,7 @@
     text-align: center;
     width: 16rem;
     height: 10rem;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -84,6 +85,7 @@
     font-weight: bold;
     color: #2d6b1f;
     z-index: 1;
+    text-align: start;
 }
 
 .filled-image {
@@ -124,7 +126,6 @@
 }
 
 #organism-text {
-    font-size: 1.4rem;
     font-weight: bold;
     margin-top: 0.25rem;
     white-space: nowrap;
@@ -142,10 +143,9 @@
 /* Skip Button */
 #skip-button {
     padding: 0.5rem 1rem;
-    font-size: 1.4rem;
     background-color: #ff9e2e;
     color: black;
-    font-weight: 500;
+    font-weight: bold;
     border: none;
     border-radius: 0.3125rem;
     cursor: pointer;
@@ -153,7 +153,7 @@
 
 /* Timer Display */
 #timer-display {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: bold;
     color: #ffdd57;
 }
@@ -164,15 +164,15 @@
 }
 
 #zoom-btn {
+    width: 3rem;
+    height: 3rem;
     position: absolute;
-    top: -0.375rem;
-    right: -0.375rem;
+    top: -1rem;
+    right: -1rem;
     background-color: rgba(255, 255, 255, 0.85);
     border: none;
     border-radius: 50%;
     cursor: pointer;
-    font-size: 0.9rem;
-    padding: 0.25rem 0.375rem;
     z-index: 2;
     line-height: 1;
     box-shadow: 0 0.0625rem 0.25rem rgba(0, 0, 0, 0.3);
@@ -204,4 +204,39 @@
     height: 80vh;
     object-fit: contain;
     border-radius: 0.5rem;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #bingo-grid {
+        width: 90%;
+        margin: auto;
+        grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    }
+    
+    .grid-cell {
+        width: 14rem;
+        height: 8.5rem;
+        font-size: 1.45rem;
+    }
+
+    .filled-label {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {   
+    #bingo-grid {
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    }
+
+    .grid-cell {
+        width: 10rem;
+        height: 7rem;
+        font-size: 1.15rem;
+    }
 }

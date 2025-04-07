@@ -145,6 +145,9 @@
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+    .menu-container {
+        margin: 1rem auto;
+    }
     .menu-content-container {
         grid-template-columns: 1fr; /* Stack items on smaller screens */
     }

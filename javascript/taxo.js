@@ -162,7 +162,10 @@ document.addEventListener("DOMContentLoaded", () => {
             organismImg.src = currentOrganism.imagePath;
             organismImg.alt = currentOrganism.name;
     
-            organismText.textContent = hardModeEnabled ? "" : currentOrganism.name;
+            organismText.textContent = "Loading...";
+            organismImg.onload = () => {
+                organismText.textContent = currentOrganism.name;
+            };
         }
     }
 
@@ -222,6 +225,28 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    organismImg.addEventListener("click", () => {
+        if (!currentOrganism) return;
+    
+        const overlay = document.createElement("div");
+        overlay.id = "zoom-overlay";
+    
+        const zoomedImg = document.createElement("img");
+        zoomedImg.src = currentOrganism.imagePath;
+        zoomedImg.alt = currentOrganism.name;
+        zoomedImg.classList.add("zoomed-image");
+
+        zoomedImg.onload = () => {
+        };        
+
+        overlay.appendChild(zoomedImg);
+        document.body.appendChild(overlay);
+    
+        overlay.addEventListener("click", () => {
+            document.body.removeChild(overlay);
+        });
+    });
+
     zoomBtn.addEventListener("click", () => {
         if (!currentOrganism) return;
     
@@ -244,7 +269,9 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+
     skipBtn.addEventListener("click", () => {
+        if (!organismImg.complete) return;
         showRandomOrganism();
     });
 
