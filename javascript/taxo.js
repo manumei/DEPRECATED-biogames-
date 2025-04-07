@@ -58,6 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const confirmGiveUpBtn = document.getElementById("confirm-giveup-btn");
     const cancelGiveUpBtn = document.getElementById("cancel-giveup-btn");
 
+    const hardModeLabel = document.querySelector(".hardmode-label");
     const organismImg = document.getElementById("organism-img");
     const organismText = document.getElementById("organism-text");
     const menu = document.getElementById("menu");
@@ -162,10 +163,14 @@ document.addEventListener("DOMContentLoaded", () => {
             organismImg.src = currentOrganism.imagePath;
             organismImg.alt = currentOrganism.name;
     
-            organismText.textContent = "Loading...";
-            organismImg.onload = () => {
-                organismText.textContent = currentOrganism.name;
-            };
+            if (!hardModeEnabled) {
+                organismText.textContent = "Loading...";
+                organismImg.onload = () => {
+                    organismText.textContent = currentOrganism.name;
+                };
+            } else {
+                organismText.innerHTML = "<i>❓❓❓</i>";
+            }
         }
     }
 
@@ -279,9 +284,11 @@ document.addEventListener("DOMContentLoaded", () => {
         hardModeEnabled = !hardModeEnabled;
     
         if (hardModeEnabled) {
+            hardModeLabel.classList.remove("hidden");
             hardModeBtn.textContent = "Hard Mode ✔";
             hardModeBtn.classList.add("enabled");
         } else {
+            hardModeLabel.classList.add("hidden");
             hardModeBtn.textContent = "Hard Mode ✖";
             hardModeBtn.classList.remove("enabled");
         }

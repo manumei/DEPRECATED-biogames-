@@ -206,6 +206,16 @@
     border-radius: 0.5rem;
 }
 
+.hardmode-label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: .5rem 1rem;
+    border-radius: .25rem;
+    background-color: #cc2222;
+    text-align: center;
+    text-transform: uppercase;
+}
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
