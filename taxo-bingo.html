@@ -1,123 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Taxo Bingo: Find organisms for all the categories before the time runs out!">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Taxo Bingo: Find organisms for all the categories before the time runs out!"
+    />
     <title>Taxo Bingo | BioGames</title>
-    <link rel="icon" href="icon.png">
+    <link rel="icon" href="icon.png" />
 
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="/favicon_io/site.webmanifest">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/favicon_io/site.webmanifest" />
 
     <!-- Styles -->
-    <link rel="preload" href="styles/normalize.css" as="style">
-    <link rel="stylesheet" type="text/css" href="styles/normalize.css">
-    <link rel="preload" href="styles/style.css" as="style">
-    <link rel="stylesheet" type="text/css" href="styles/style.css">
-    <link rel="preload" href="styles/taxo.css" as="style">
-    <link rel="stylesheet" type="text/css" href="styles/taxo.css">
-    <link rel="preload" href="styles/menu.css" as="style">
-    <link rel="stylesheet" type="text/css" href="styles/menu.css">
+    <link rel="preload" href="styles/normalize.css" as="style" />
+    <link rel="stylesheet" type="text/css" href="styles/normalize.css" />
+    <link rel="preload" href="styles/style.css" as="style" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <link rel="preload" href="styles/taxo.css" as="style" />
+    <link rel="stylesheet" type="text/css" href="styles/taxo.css" />
+    <link rel="preload" href="styles/menu.css" as="style" />
+    <link rel="stylesheet" type="text/css" href="styles/menu.css" />
 
     <!-- Scripts -->
     <script src="javascript/taxo.js" defer></script>
-</head>
+  </head>
 
-<body>
+  <body>
+    
     <header>
-        <a href="index.html" class="logo">
-            <span class="green">BIO</span>GAMES
-            <img src="icon.png" alt="BioGames">
-        </a>
+      <a href="index.html" class="logo">
+        <span class="green">BIO</span>GAMES
+        <img src="icon.png" alt="BioGames" />
+      </a>
     </header>
 
     <div id="menu" class="menu-container">
-        <h2 class="menu-title"><span class="green">TAXO</span> BINGO</h2>
-        
-        <!-- menu -->
-        <div class="menu-content-container"> <!-- Image & text side by side -->
-            <img src="assets/img/taxo-cover.png" alt="Taxo-Bingo Cover" class="menu-image">
-            
-            <div class="menu-content">
-                <p class="menu-text">Fill the bingo grid organisms matching the 12 taxonomic categories given.
-                    <br><br> When an organism appears, click a category where it fits, or skip to the next. Fill the whole grid to win!
-                    <br><br> Hard Mode hides the names, giving you only the image of the organism for your guess </p>
+      <h2 class="menu-title"><span class="green">TAXO</span> BINGO</h2>
+      
+      <!-- menu -->
+      <div class="menu-content-container">
+        <!-- Image & text side by side -->
+        <img
+        src="assets/img/taxo-cover.png"
+        alt="Taxo-Bingo Cover"
+          class="menu-image"
+        />
 
-                <div class="timer-buttons">
-                    <p>Select your timer below:</p>
-                    <div class="timer-btns">
-                        <button class="timer-btn" timer="None">No Timer</button>
-                        <button class="timer-btn" timer="90s">90s</button>
-                        <button class="timer-btn selected" timer="150s">150s</button>
-                        <!-- <button class="timer-btn" timer="5s">5s</button>
+        <div class="menu-content">
+          <p class="menu-text">
+            Fill the bingo grid organisms matching the 12 taxonomic categories
+            given. <br /><br />
+            When an organism appears, click a category where it fits, or skip to
+            the next. Fill the whole grid to win! <br /><br />
+            Hard Mode hides the names, giving you only the image of the organism
+            for your guess
+          </p>
+
+          <div class="timer-buttons">
+            <p>Select your timer below:</p>
+            <div class="timer-btns">
+              <button class="timer-btn" timer="None">No Timer</button>
+              <button class="timer-btn" timer="90s">90s</button>
+              <button class="timer-btn selected" timer="150s">150s</button>
+              <!-- <button class="timer-btn" timer="5s">5s</button>
                         <button class="timer-btn selected" timer="720s">720s</button> -->
-                    </div>
-                </div>
-
-                <div class="start-row">
-                    <button id="start-game-btn">Start Game</button>
-                    <button id="hard-mode-btn">Hard Mode ✖</button>
-                </div>
-
             </div>
+          </div>
+
+          <div class="start-row">
+            <button id="start-game-btn">Start Game</button>
+            <button id="hard-mode-btn">Hard Mode ✖</button>
+          </div>
         </div>
+      </div>
     </div>
-    
+
     <!-- GAME SCREEN (Hidden by Default) -->
     <div id="game-container" class="hidden">
-        <div id="organism-container">
-            <div id="organism-info">
-                <div id="organism-image-wrapper">
-                    <img id="organism-img" src="" alt="Organism Image">
-                    <button id="zoom-btn" title="Zoom Image">⛶</button>
-                </div>
-                <p id="organism-text"><em>❓❓❓</em></p>
-            </div>
-
-            <div id="organism-controls">
-                <div class="hardmode-label hidden">Hard mode!</div>
-                <button id="skip-button">SKIP</button>
-                <div id="timer-display">Time Left: <span id="time-left"></span></div>
-            </div>
-        </div>            
-
-        <div id="bingo-grid">
-            <!-- Grid cells will be filled by JS -->
+      <div id="organism-container">
+        <div id="organism-info">
+          <div id="organism-image-wrapper">
+            <img id="organism-img" src="" alt="Organism Image" />
+            <button id="zoom-btn" title="Zoom Image">⛶</button>
+          </div>
+          <p id="organism-text"><em>❓❓❓</em></p>
         </div>
 
-        <button id="give-up-btn" title="Give up?">🏳️</button>
-        <div id="giveup-popup" class="hidden">
-            <p class="giveup-sure">Are you sure you want to give up?</p>
-            <div class="giveup-buttons">
-                <button id="confirm-giveup-btn" class="giveup-opt-btn">Yes</button>
-                <button id="cancel-giveup-btn" class="giveup-opt-btn">No</button>
-            </div>
+        <div id="organism-controls">
+          <div class="hardmode-label hidden">Hard mode!</div>
+          <button id="skip-button">SKIP</button>
+          <div id="timer-display">Time Left: <span id="time-left"></span></div>
         </div>
+      </div>
 
-        <div id="loss-popup" class="over-popup hidden">
-            <button id="close-loss-popup" class="close-button">✖</button>
-            <h2 class="over-title">You lost 🥀</h2>
-            <p>Remember, failure is the starting point for learning</p>
-            <!-- <p>Come back tomorrow to try again!</p> -->
-            <a href="index.html" class="back-button">Go back to game menu</a>
+      <div id="bingo-grid">
+        <!-- Grid cells will be filled by JS -->
+      </div>
+
+      <button id="give-up-btn" title="Give up?">🏳️</button>
+      <div id="giveup-popup" class="hidden">
+        <p class="giveup-sure">Are you sure you want to give up?</p>
+        <div class="giveup-buttons">
+          <button id="confirm-giveup-btn" class="giveup-opt-btn">Yes</button>
+          <button id="cancel-giveup-btn" class="giveup-opt-btn">No</button>
         </div>
-        
-        <div id="win-popup" class="over-popup hidden">
-            <button id="close-win-popup" class="close-button">✖</button>
-            <h2 class="over-title">You Won! 🎉</h2>
-            <p>Congratulations on completing taxonomy bingo! You, are the greatest biological mind I've ever known</p>
-            <!-- <p>Come back tomorrow to keep testing yourself!</p> -->
-            <a href="index.html" class="back-button">Go back to game menu</a>
-        </div>
-    </div>    
-</body>
+      </div>
+
+      <div id="loss-popup" class="over-popup hidden">
+        <button id="close-loss-popup" class="close-button">✖</button>
+        <h2 class="over-title">You lost 🥀</h2>
+        <p>Remember, failure is the starting point for learning</p>
+        <!-- <p>Come back tomorrow to try again!</p> -->
+        <a href="index.html" class="back-button">Go back to game menu</a>
+      </div>
+
+      <div id="win-popup" class="over-popup hidden">
+        <button id="close-win-popup" class="close-button">✖</button>
+        <h2 class="over-title">You Won! 🎉</h2>
+        <p>
+          Congratulations on completing taxonomy bingo! You, are the greatest
+          biological mind I've ever known
+        </p>
+        <!-- <p>Come back tomorrow to keep testing yourself!</p> -->
+        <a href="index.html" class="back-button">Go back to game menu</a>
+      </div>
+    </div>
+  </body>
 </html>
