@@ -1,7 +1,7 @@
 let organisms = [];
 let availableOrganisms = [];
 let currentOrganism = null;
-let selectedTimerValue = 120; // default
+let selectedTimerValue = 150; // default
 let clickLocked = false;
 let hardModeEnabled = false;
 
