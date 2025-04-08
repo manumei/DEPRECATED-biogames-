@@ -28,11 +28,11 @@ This is how my HMTL for the "you lost" screens currenty looks:
 
 _What to add:_ I want to add conditional messages for the You Lost as such:
 if they filled 11 cells: "AAA ikr, that one {name_of_the_unfilled_cell_category} you probably skimmed through or just didn't wanna show up"
-if they filled 9-10 cells: "you came quite close, even I couldn't do all 12 cells at first, and I literally made this game by hand"
+if they filled 9-10 cells: "You came quite close, even I couldn't do all 12 cells at first, and I literally made this game by hand"
 if they filled 6-8 cells: "{amount_of_cells_filled} Roentgen, not great, not terrible"
-if they filled 3-5 cells: ""
-if they filled 1-2 cells: ""
-if they filled 0 cells: ""
+if they filled 3-5 cells: "Warm Up game fr, I'm sure you'll do better next time"
+if they filled 1-2 cells: "vayan a estudiar"
+if they filled 0 cells: "dont even blame the RNG, just put the fries in the bag lil bro"
 
 
 **Step 10 | Game Progress & Refresh**
