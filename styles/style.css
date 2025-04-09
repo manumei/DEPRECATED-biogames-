@@ -261,3 +261,10 @@ header {
 }
 
 
+/* agregar el footer a responsive design */
+
+
+/* hace unzoom hasta ponele 25%, y preguntale al mono como hacer que se quede al fondo
+tampoco se muy bien como _deberia_ quedar, pero at least cambiar el background color de .body en si 
+a ser el de footer, y agregar un div de main y que ese div tenga de background color el "default" de ahora 
+asi todo lo que esta afuera (aka, abajo del footer ponele) sea vea del mismo background color */
