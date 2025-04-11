@@ -248,8 +248,8 @@ header {
 }
 
 .social-icons img {
-    width: 2rem;
-    height: 2rem;
+    width: 4rem; 
+    height: 4rem;
     cursor: pointer;
 }
 
