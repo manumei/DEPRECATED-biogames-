@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const shuffled = remainingCategories.sort(() => 0.5 - Math.random());
         const selectedCategories = shuffled.slice(0, 9); // Reduce to 9 to make space for "angiosperma"
-        const finalCategories = [domainCategory, kingdomCategory, angiosperma, ...selectedCategories];
+        const finalCategories = [domainCategory, kingdomCategory, angiosperma, ...selectedCategories]; // UNCOMMENT ME TO PLAY WITH ACTUAL GAME
         // const finalCategories = Array(12).fill("Eukaryota"); //UNCOMMENT ME TO PLAY WITH FULL EUKARYOTA FOR TESTING
         finalCategories.sort(() => 0.5 - Math.random());
 
@@ -183,9 +183,31 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("give-up-btn").disabled = true;
     
         if (won) {
-            console.log("🎉 You won! 🎉");
             document.getElementById("win-popup").classList.remove("hidden");
         } else {
+            const lossMsg = document.getElementById("loss-message");
+            let msg = "";
+        
+            if (filledCount === 11) {
+                // Find the unfilled category
+                const allCells = document.querySelectorAll(".grid-cell");
+                const unfilled = Array.from(allCells).find(cell => !cell.classList.contains("filled-cell"));
+                const category = unfilled?.textContent?.trim() || "one";
+        
+                msg = `AAA ikr, that one "${category}" you probably skimmed through or just didn't wanna show up`;
+            } else if (filledCount >= 9) {
+                msg = "You came quite close, even I couldn't do all 12 cells at first, and I literally made this game by hand";
+            } else if (filledCount >= 6) {
+                msg = `${filledCount} Roentgen, not great, not terrible`;
+            } else if (filledCount >= 3) {
+                msg = "Warm Up game fr, I'm sure you'll do better next time";
+            } else if (filledCount >= 1) {
+                msg = "ni 2 organismos, vayan a estudiar";
+            } else {
+                msg = "0 cells... dont even blame the RNG, just put the fries in the bag lil bro";
+            }
+        
+            lossMsg.textContent = msg;
             document.getElementById("loss-popup").classList.remove("hidden");
         }
     }

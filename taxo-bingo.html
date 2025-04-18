@@ -91,7 +91,7 @@
                 <button class="timer-btn" timer="90s">90s</button>
                 <button class="timer-btn selected" timer="150s">150s</button>
                 <!-- <button class="timer-btn" timer="5s">5s</button>
-                          <button class="timer-btn selected" timer="720s">720s</button> -->
+                <button class="timer-btn selected" timer="720s">720s</button> -->
               </div>
             </div>
 
@@ -137,8 +137,10 @@
         <div id="loss-popup" class="over-popup hidden">
           <button id="close-loss-popup" class="close-button">✖</button>
           <h2 class="over-title">You lost 🥀</h2>
-          <p>Remember, failure is the starting point for learning</p>
+          <p id="loss-message"></p> <!-- this will hold the dynamic message -->
           <!-- <p>Come back tomorrow to try again!</p> -->
+          <br>
+          <p>Remember, failure is the starting point for learning</p>
           <a href="index.html" class="back-button">Go back to game menu</a>
         </div>
 
