@@ -1,16 +1,13 @@
 We will be implementing a new game, called Bio-Wordle
 It will work like the New York Times popuar "Wordle", except with a few differences:
 - Words wont always be 5-letters long, each game will have a fixed amount of letters in the answer, but this amount might be 4-7 randomly per game
-- Any guesses are allowed, any combination of N letters (where N is the length of the word of course)
 - Answer will always be a biology-related word taken from our dataset
 
-To implement this, we will go step by step. Considering I already have the game panel, "start game" button logic implemented from my other games which I can refactor here, we will just focus specifically on the wordle steps. 
+To implement this, we will go step by step as follows:
 
-
-**Step 1 | Model Dataset**
-Let's implement a small developing TXT or CSV dataset with some bio-related words. I was thinking we should start off with 15 random words of each length (4, 5, 6, 7). 
-
-Should we separate them into 4 columns for each length? Or just put them all together and analyze the length after fetching?
+**Step 1 | Dataset** 
+ALREADY DONE!! I have set up my dataset of words in a .txt file at root/assets/data/biowords.txt
+Each line is a word, to be easily called via JavaScript as we start implementing game logic in the next step
 
 
 **Step 2 | Game UI Base**
@@ -28,8 +25,11 @@ __What to add in this Step:__
 - If a wrong guess is made on the last guess bar, pop up an alert ("you lost")
 
 
-**Step 3 | Winning and Losing popups**
-ya hice las screens, fijate de implementarlas con hidden y eso
+**Step 3 | Only Valid Words!**
+We will not be limiting the word inputs to bio-only because our dataset isn't big enough, and the game would be too hard.
+However, we will limit it to only valid english words (length 4-7). Shall we use a library for this? 
+What library does Wordle use? We need all valid English words of the appropriate character length to count as inputs.
+So that players can't just input anything like "AAAAA" or "AEIOU" and get away with it, some thinking needs to be done.
 
 
 **Step 4 | Hint Colors**
@@ -39,6 +39,7 @@ When a guess is made, we will color the inputted letters appropriately to give t
 Go letter by letter and compare to the secret answer. If the letter matches the placement, color it green. If the letter is in the word, but in the wrong place, color it yellow. If the letter is not in the word, color it dark grey. 
 
 And color them accordingly in the keyboard below too, so the user knows easily which letters they've used, and out of those, which ones fit and which ones dont too. 
+
 
 *Step 4 "trickier" corollary | Letter Repetitions:*
 
@@ -50,3 +51,7 @@ Guessing "XLXLXL" will paint the first L green of course, and the other 2 as yel
 
 Let's implement the logic from this, and if more bugs and specific troubling scenarios arise from my testing, I will let you know
 
+
+**Step 5 | Win-Lose Pop-Ups**
+I have already implemented this for another of my bio-related games.
+So when the time for this step comes, we will work together on reusing the code logic for the pop up screens.
